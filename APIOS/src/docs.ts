@@ -1,3 +1,0 @@
-export function docs() {
-  return { name: "APIOS", package: "@appneurox/apios", purpose: "API design, contracts, endpoint generation, SDK generation, versioning, rate limiting, documentation, testing, monitoring, and API lifecycle management.", owns: ["API","Endpoint","APIContract","APIVersion","APIConsumer","RateLimitPolicy","SDKPackage","APITest","APIMetric"], routes: ["GET /health", "GET /docs", "GET /apios/overview", "GET /apios/items", "POST /apios/items", "GET /apios/items/:id", "PATCH /apios/items/:id", "DELETE /apios/items/:id", "GET /apios/runs", "POST /apios/runs", "GET /apios/events", "GET /apios/audit"] };
-}

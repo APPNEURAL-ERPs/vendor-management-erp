@@ -1,3 +1,0 @@
-export function docs() {
-  return { name: "EntityOS", package: "@appneurox/entityos", purpose: "Universal business object definitions, schemas, records, relationships, lifecycle, ownership, validation, search, audit, and metadata.", owns: ["EntityType","EntityRecord","EntitySchema","EntityField","EntityRelationship","EntityLifecycle","EntityValidation","EntityIndex"], routes: ["GET /health", "GET /docs", "GET /entityos/overview", "GET /entityos/items", "POST /entityos/items", "GET /entityos/items/:id", "PATCH /entityos/items/:id", "DELETE /entityos/items/:id", "GET /entityos/runs", "POST /entityos/runs", "GET /entityos/events", "GET /entityos/audit"] };
-}
