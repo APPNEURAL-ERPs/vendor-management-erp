@@ -1,0 +1,36 @@
+{
+  "name": "@appneurox/developeros",
+  "version": "1.0.0",
+  "description": "DeveloperOS: software development, code generation, API registry, SDK generation, CLI generation, documentation, webhooks, API keys, service accounts, sandbox, and developer portal",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/developeros.db.json && npm run seed",
+    "seed": "npm run build && node dist/seed-state.js",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "developeros",
+    "developer-platform",
+    "sdk-generator",
+    "api-registry",
+    "cli-generator",
+    "developer-portal"
+  ],
+  "appneurox": {
+    "os": "developeros",
+    "domain": "developer",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@appneurox/projectos",
+  "version": "1.0.0",
+  "description": "ProjectOS: project management OS for projects, milestones, sprints, tasks, resources, budgets, and project lifecycle",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/projectos.db.json && npm run seed",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "projectos",
+    "project-management",
+    "operating-system",
+    "sdk"
+  ],
+  "appneurox": {
+    "os": "projectos",
+    "domain": "projects",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

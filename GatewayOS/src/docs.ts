@@ -1,0 +1,3 @@
+export function docs() {
+  return { name: "GatewayOS", package: "@appneurox/gatewayos", purpose: "Gateway routing, traffic control, request validation, authentication gateway, service gateway, tenant gateway, edge gateway, and policy enforcement.", owns: ["Gateway","GatewayRoute","GatewayService","GatewayPolicy","TrafficRule","RateLimit","GatewayTrace","GatewayIncident"], routes: ["GET /health", "GET /docs", "ANY /v1/*", "GET /gatewayos/overview", "GET /gatewayos/items", "POST /gatewayos/items", "GET /gatewayos/items/:id", "PATCH /gatewayos/items/:id", "DELETE /gatewayos/items/:id", "GET /gatewayos/runs", "POST /gatewayos/runs", "GET /gatewayos/events", "GET /gatewayos/audit"] };
+}

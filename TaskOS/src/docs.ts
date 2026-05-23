@@ -1,0 +1,3 @@
+export function docs() {
+  return { name: "TaskOS", package: "@appneurox/taskos", purpose: "Tasks, assignments, checklists, action items, ownership, priorities, deadlines, dependencies, approvals, execution tracking, and productivity coordination.", owns: ["Task","TaskBoard","Checklist","TaskComment","TaskDependency","TaskReminder","TaskApproval","TaskSLA"], routes: ["GET /health", "GET /docs", "GET /taskos/overview", "GET /taskos/items", "POST /taskos/items", "GET /taskos/items/:id", "PATCH /taskos/items/:id", "DELETE /taskos/items/:id", "GET /taskos/runs", "POST /taskos/runs", "GET /taskos/events", "GET /taskos/audit"] };
+}

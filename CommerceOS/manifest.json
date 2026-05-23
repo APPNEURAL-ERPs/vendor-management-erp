@@ -1,0 +1,90 @@
+{
+  "id": "commerceos",
+  "name": "CommerceOS",
+  "package": "@appneurox/commerceos",
+  "version": "1.0.0",
+  "description": "Ecommerce, retail, product catalog, inventory, orders, payments, subscriptions, and commerce growth",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "CommerceOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/commerce",
+    "standalonePath": "/commerceos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "commerce.product.create",
+    "commerce.order.create",
+    "commerce.cart.add",
+    "commerce.checkout.process",
+    "commerce.payment.process"
+  ],
+  "workflows": [
+    "commerce.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "commerce.product.created",
+      "commerce.product.updated",
+      "commerce.order.created",
+      "commerce.order.status_changed",
+      "commerce.payment.completed",
+      "commerce.payment.failed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "commerce.product.read",
+    "commerce.product.write",
+    "commerce.order.read",
+    "commerce.order.write",
+    "commerce.payment.process",
+    "commerce.refund.process",
+    "commerce.analytics.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/financeos",
+      "@appneurox/billingos"
+    ]
+  },
+  "dataClassification": "internal",
+  "commerceFeatures": [
+    "product-catalog",
+    "inventory-management",
+    "cart-management",
+    "checkout",
+    "order-management",
+    "payment-processing",
+    "subscription-commerce",
+    "refund-processing",
+    "customer-management",
+    "commerce-analytics"
+  ],
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "financeos",
+    "billingos"
+  ],
+  "runtime": {
+    "port": 8700,
+    "localBaseUrl": "http://localhost:8700"
+  }
+}

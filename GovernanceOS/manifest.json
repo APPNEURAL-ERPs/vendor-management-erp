@@ -1,0 +1,70 @@
+{
+  "id": "governanceos",
+  "name": "GovernanceOS",
+  "package": "@appneurox/governanceos",
+  "version": "1.0.0",
+  "description": "Board governance, policies, board meetings, resolutions, and corporate governance",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "GovernanceOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/governance",
+    "standalonePath": "/governanceos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "governance.meeting.create",
+    "governance.resolution.create",
+    "governance.policy.create"
+  ],
+  "events": {
+    "publishes": [
+      "governance.meeting.created",
+      "governance.meeting.updated",
+      "governance.resolution.created",
+      "governance.resolution.updated",
+      "governance.policy.created",
+      "governance.policy.updated"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "governance.read",
+    "governance.meeting.write",
+    "governance.resolution.write",
+    "governance.policy.write",
+    "governance.director.write",
+    "governance.committee.write",
+    "governance.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "complianceos",
+    "adminos"
+  ],
+  "runtime": {
+    "port": 9800,
+    "localBaseUrl": "http://localhost:9800"
+  }
+}

@@ -1,0 +1,1382 @@
+[
+  {
+    "dir": "AdminOS",
+    "id": "adminos",
+    "name": "AdminOS",
+    "package": "@appneurox/adminos",
+    "version": "1.0.0",
+    "description": "AdminOS: administrative control center for settings, resources, approvals, operations, and internal configuration.",
+    "api": {
+      "basePath": "/v1/admin",
+      "standalonePath": "/adminos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8200,
+      "localBaseUrl": "http://localhost:8200"
+    },
+    "port": 8200
+  },
+  {
+    "dir": "AgenticOS",
+    "id": "agenticos",
+    "name": "AgenticOS",
+    "package": "@appneurox/agenticos",
+    "version": "1.0.0",
+    "description": "AI agent operating system for building, managing, securing, monitoring, and scaling safe tool-connected agents.",
+    "api": {
+      "basePath": "/v1/agentic",
+      "standalonePath": "/agentic",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 7000,
+      "localBaseUrl": "http://localhost:7000"
+    },
+    "port": 7000
+  },
+  {
+    "dir": "AIOS",
+    "id": "aios",
+    "name": "AIOS",
+    "package": "@appneurox/aios",
+    "version": "1.0.0",
+    "description": "Agents, prompts, tools, model routing, memory, and AI evaluation",
+    "api": {
+      "basePath": "/v1/ai",
+      "standalonePath": "/aios",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5700,
+      "localBaseUrl": "http://localhost:5700"
+    },
+    "port": 5700
+  },
+  {
+    "dir": "AIResourceOS",
+    "id": "airesourceos",
+    "name": "AIResourceOS",
+    "package": "@appneurox/airesourceos",
+    "version": "1.0.0",
+    "description": "AI resource management, token budgets, model selection, cost tracking, and AI quota management",
+    "api": {
+      "basePath": "/v1/airesource",
+      "standalonePath": "/airesourceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12200,
+      "localBaseUrl": "http://localhost:12200"
+    },
+    "port": 12200
+  },
+  {
+    "dir": "AnalyticsOS",
+    "id": "analyticsos",
+    "name": "AnalyticsOS",
+    "package": "@appneurox/analyticsos",
+    "version": "1.0.0",
+    "description": "Analytics dashboards, metrics, funnels, cohorts, attribution, and business intelligence",
+    "api": {
+      "basePath": "/v1/analytics",
+      "standalonePath": "/analyticsos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 7400,
+      "localBaseUrl": "http://localhost:7400"
+    },
+    "port": 7400
+  },
+  {
+    "dir": "APIOS",
+    "id": "apios",
+    "name": "APIOS",
+    "package": "@appneurox/apios",
+    "version": "1.0.0",
+    "description": "API design, contracts, endpoint generation, SDK generation, versioning, rate limiting, documentation, testing, monitoring, and API lifecycle management.",
+    "api": {
+      "basePath": "/v1/api",
+      "standalonePath": "/apios",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10710,
+      "localBaseUrl": "http://localhost:10710"
+    },
+    "port": 10710
+  },
+  {
+    "dir": "AssetOS",
+    "id": "assetos",
+    "name": "AssetOS",
+    "package": "@appneurox/assetos",
+    "version": "1.0.0",
+    "description": "Asset lifecycle, fixed assets, IT assets, equipment, assignment, handover, maintenance, depreciation, warranty, and asset governance.",
+    "api": {
+      "basePath": "/v1/asset",
+      "standalonePath": "/assetos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11700,
+      "localBaseUrl": "http://localhost:11700"
+    },
+    "port": 11700
+  },
+  {
+    "dir": "AuditOS",
+    "id": "auditos",
+    "name": "AuditOS",
+    "package": "@appneurox/auditos",
+    "version": "1.0.0",
+    "description": "Immutable audit trails, evidence, compliance proof, activity tracking, change history, access review, and accountability layer",
+    "api": {
+      "basePath": "/v1/audit",
+      "standalonePath": "/auditos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5600,
+      "localBaseUrl": "http://localhost:5600"
+    },
+    "port": 5600
+  },
+  {
+    "dir": "AutomationOS",
+    "id": "automationos",
+    "name": "AutomationOS",
+    "package": "@appneurox/automationos",
+    "version": "1.0.0",
+    "description": "Triggers, workflows, schedules, approvals, retries, and automation runs",
+    "api": {
+      "basePath": "/v1/automation",
+      "standalonePath": "/automationos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 7100,
+      "localBaseUrl": "http://localhost:7100"
+    },
+    "port": 7100
+  },
+  {
+    "dir": "BillingOS",
+    "id": "billingos",
+    "name": "BillingOS",
+    "package": "@appneurox/billingos",
+    "version": "1.0.0",
+    "description": "BillingOS: subscription, plan, invoice, payment, usage metering, credits, renewals, refunds, dunning, tax, and billing automation",
+    "api": {
+      "basePath": "/v1/billing",
+      "standalonePath": "/billingos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "BrandOS",
+    "id": "brandos",
+    "name": "BrandOS",
+    "package": "@appneurox/brandos",
+    "version": "1.0.0",
+    "description": "BrandOS: brand identity, brand strategy, visual consistency, messaging, content style, and brand asset management layer",
+    "api": {
+      "basePath": "/v1/brand",
+      "standalonePath": "/brandos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "BusinessOS",
+    "id": "businessos",
+    "name": "BusinessOS",
+    "package": "@appneurox/businessos",
+    "version": "1.0.0",
+    "description": "Business planning, strategy, OKRs, initiatives, decisions, scorecards, and growth management",
+    "api": {
+      "basePath": "/v1/business",
+      "standalonePath": "/businessos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8000,
+      "localBaseUrl": "http://localhost:8000"
+    },
+    "port": 8000
+  },
+  {
+    "dir": "CampaignOS",
+    "id": "campaignos",
+    "name": "CampaignOS",
+    "package": "@appneurox/campaignos",
+    "version": "1.0.0",
+    "description": "Marketing campaigns, channels, content, scheduling, A/B testing, and campaign analytics",
+    "api": {
+      "basePath": "/v1/campaigns",
+      "standalonePath": "/campaignos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12100,
+      "localBaseUrl": "http://localhost:12100"
+    },
+    "port": 12100
+  },
+  {
+    "dir": "CareerOS",
+    "id": "careeros",
+    "name": "CareerOS",
+    "package": "@appneurox/careeros",
+    "version": "1.0.0",
+    "description": "CareerOS: Jobs, hiring pipeline, applications, interviews, offers, onboarding, and career paths",
+    "api": {
+      "basePath": "/v1/career",
+      "standalonePath": "/career",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10200,
+      "localBaseUrl": "http://localhost:10200"
+    },
+    "port": 10200
+  },
+  {
+    "dir": "ClientOS",
+    "id": "clientos",
+    "name": "ClientOS",
+    "package": "@appneurox/clientos",
+    "version": "1.0.0",
+    "description": "Client relationship management, onboarding, requirements, proposals, communication, delivery, support, health scores, and retention",
+    "api": {
+      "basePath": "/v1/clients",
+      "standalonePath": "/clientos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8600,
+      "localBaseUrl": "http://localhost:8600"
+    },
+    "port": 8600
+  },
+  {
+    "dir": "CommandOS",
+    "id": "commandos",
+    "name": "CommandOS",
+    "package": "@appneurox/commandos",
+    "version": "1.0.0",
+    "description": "Commands, orchestration, intent-to-action, runbooks, automation, and incidents",
+    "api": {
+      "basePath": "/v1/command",
+      "standalonePath": "/commandos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6700,
+      "localBaseUrl": "http://localhost:6700"
+    },
+    "port": 6700
+  },
+  {
+    "dir": "CommerceOS",
+    "id": "commerceos",
+    "name": "CommerceOS",
+    "package": "@appneurox/commerceos",
+    "version": "1.0.0",
+    "description": "Ecommerce, retail, product catalog, inventory, orders, payments, subscriptions, and commerce growth",
+    "api": {
+      "basePath": "/v1/commerce",
+      "standalonePath": "/commerceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8700,
+      "localBaseUrl": "http://localhost:8700"
+    },
+    "port": 8700
+  },
+  {
+    "dir": "CommunicationOS",
+    "id": "communicationos",
+    "name": "CommunicationOS",
+    "package": "@appneurox/communicationos",
+    "version": "1.0.0",
+    "description": "Communication, messaging, inbox, email, chat, WhatsApp, calling, meeting, announcements, and collaboration layer of APPNEURAL",
+    "api": {
+      "basePath": "/v1/communication",
+      "standalonePath": "/communicationos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10900,
+      "localBaseUrl": "http://localhost:10900"
+    },
+    "port": 10900
+  },
+  {
+    "dir": "CommunityOS",
+    "id": "communityos",
+    "name": "CommunityOS",
+    "package": "@appneurox/communityos",
+    "version": "1.0.0",
+    "description": "Community building, forums, discussions, events, members, gamification, and member lifecycle",
+    "api": {
+      "basePath": "/v1/community",
+      "standalonePath": "/communityos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "ComplianceOS",
+    "id": "complianceos",
+    "name": "ComplianceOS",
+    "package": "@appneurox/complianceos",
+    "version": "1.0.0",
+    "description": "Regulatory compliance, certifications, standards, audits, controls, and compliance monitoring",
+    "api": {
+      "basePath": "/v1/compliance",
+      "standalonePath": "/compliance",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9700,
+      "localBaseUrl": "http://localhost:9700"
+    },
+    "port": 9700
+  },
+  {
+    "dir": "ConfigOS",
+    "id": "configos",
+    "name": "ConfigOS",
+    "package": "@appneurox/configos",
+    "version": "1.0.0",
+    "description": "Runtime configuration, tenant settings, feature flags, environment config, and OS-level settings management",
+    "api": {
+      "basePath": "/v1/config",
+      "standalonePath": "/configos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5500,
+      "localBaseUrl": "http://localhost:5500"
+    },
+    "port": 5500
+  },
+  {
+    "dir": "ContentOS",
+    "id": "contentos",
+    "name": "ContentOS",
+    "package": "@appneurox/contentos",
+    "version": "1.0.0",
+    "description": "Content creation, publishing, CMS, blogs, SEO, localization, and content lifecycle management",
+    "api": {
+      "basePath": "/v1/content",
+      "standalonePath": "/contentos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9200,
+      "localBaseUrl": "http://localhost:9200"
+    },
+    "port": 9200
+  },
+  {
+    "dir": "ContractOS",
+    "id": "contractos",
+    "name": "ContractOS",
+    "package": "@appneurox/contractos",
+    "version": "1.0.0",
+    "description": "Contract lifecycle management: agreements, clauses, signatures, negotiations, obligations, amendments, and compliance tracking",
+    "api": {
+      "basePath": "/v1/contracts",
+      "standalonePath": "/contractos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9500,
+      "localBaseUrl": "http://localhost:9500"
+    },
+    "port": 9500
+  },
+  {
+    "dir": "DataOS",
+    "id": "dataos",
+    "name": "DataOS",
+    "package": "@appneurox/dataos",
+    "version": "1.0.0",
+    "description": "Data models, schemas, datasets, catalogs, lineage, quality, access, and data products",
+    "api": {
+      "basePath": "/v1/data",
+      "standalonePath": "/dataos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6500,
+      "localBaseUrl": "http://localhost:6500"
+    },
+    "port": 6500
+  },
+  {
+    "dir": "DeliveryOS",
+    "id": "deliveryos",
+    "name": "DeliveryOS",
+    "package": "@appneurox/deliveryos",
+    "version": "1.0.0",
+    "description": "Delivery, dispatch, shipment, logistics, fulfillment, handover, route, courier, proof-of-delivery, delivery tracking, and delivery performance management",
+    "api": {
+      "basePath": "/v1/delivery",
+      "standalonePath": "/deliveryos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11600,
+      "localBaseUrl": "http://localhost:11600"
+    },
+    "port": 11600
+  },
+  {
+    "dir": "DeveloperOS",
+    "id": "developeros",
+    "name": "DeveloperOS",
+    "package": "@appneurox/developeros",
+    "version": "1.0.0",
+    "description": "Software development, code generation, API registry, SDK generation, CLI generation, documentation, webhooks, API keys, service accounts, sandbox, and developer portal",
+    "api": {
+      "basePath": "/v1/developer",
+      "standalonePath": "/developeros",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6600,
+      "localBaseUrl": "http://localhost:6600"
+    },
+    "port": 6600
+  },
+  {
+    "dir": "DocumentOS",
+    "id": "documentos",
+    "name": "DocumentOS",
+    "package": "@appneurox/documentos",
+    "version": "1.0.0",
+    "description": "Document generation, templates, PDFs, proposals, contracts, invoices, certificates, reports, and document workflows",
+    "api": {
+      "basePath": "/v1/documents",
+      "standalonePath": "/documentos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6400,
+      "localBaseUrl": "http://localhost:6400"
+    },
+    "port": 6400
+  },
+  {
+    "dir": "EntityOS",
+    "id": "entityos",
+    "name": "EntityOS",
+    "package": "@appneurox/entityos",
+    "version": "1.0.0",
+    "description": "Universal business object definitions, schemas, records, relationships, lifecycle, ownership, validation, search, audit, and metadata.",
+    "api": {
+      "basePath": "/v1/entity",
+      "standalonePath": "/entityos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10712,
+      "localBaseUrl": "http://localhost:10712"
+    },
+    "port": 10712
+  },
+  {
+    "dir": "EventOS",
+    "id": "eventos",
+    "name": "EventOS",
+    "package": "@appneurox/eventos",
+    "version": "1.0.0",
+    "description": "Domain events, event bus, event schema registry, subscriptions, webhooks, replay, and async communication",
+    "api": {
+      "basePath": "/v1/events",
+      "standalonePath": "/eventos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5800,
+      "localBaseUrl": "http://localhost:5800"
+    },
+    "port": 5800
+  },
+  {
+    "dir": "ExperienceOS",
+    "id": "experienceos",
+    "name": "ExperienceOS",
+    "package": "@appneurox/experienceos",
+    "version": "1.0.0",
+    "description": "User experience, customer experience, journeys, onboarding, personalization, A/B testing, and experience optimization",
+    "api": {
+      "basePath": "/v1/experience",
+      "standalonePath": "/experienceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9400,
+      "localBaseUrl": "http://localhost:9400"
+    },
+    "port": 9400
+  },
+  {
+    "dir": "ExperimentOS",
+    "id": "experimentos",
+    "name": "ExperimentOS",
+    "package": "@appneurox/experimentos",
+    "version": "1.0.0",
+    "description": "A/B testing, experiments, variants, metrics, statistical analysis, and experimentation lifecycle",
+    "api": {
+      "basePath": "/v1/experiments",
+      "standalonePath": "/experimentos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11000,
+      "localBaseUrl": "http://localhost:11000"
+    },
+    "port": 11000
+  },
+  {
+    "dir": "FileOS",
+    "id": "fileos",
+    "name": "FileOS",
+    "package": "@appneurox/fileos",
+    "version": "1.0.0",
+    "description": "File storage, upload, download, folder management, permissions, versioning, sharing, and S3/R2-backed object management",
+    "api": {
+      "basePath": "/v1/files",
+      "standalonePath": "/fileos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6200,
+      "localBaseUrl": "http://localhost:6200"
+    },
+    "port": 6200
+  },
+  {
+    "dir": "FinanceOS",
+    "id": "financeos",
+    "name": "FinanceOS",
+    "package": "@appneurox/financeos",
+    "version": "1.0.0",
+    "description": "Finance management: invoices, expenses, budgets, payments, revenue, cash flow, forecasting, and financial controls",
+    "api": {
+      "basePath": "/v1/finance",
+      "standalonePath": "/financeos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8300,
+      "localBaseUrl": "http://localhost:8300"
+    },
+    "port": 8300
+  },
+  {
+    "dir": "FrontendOS",
+    "id": "frontendos",
+    "name": "FrontendOS",
+    "package": "@appneurox/frontendos",
+    "version": "1.0.0",
+    "description": "Frontend architecture, app shells, design systems, components, pages, layouts, routing, state, forms, accessibility, performance, and app experience.",
+    "api": {
+      "basePath": "/v1/frontend",
+      "standalonePath": "/frontendos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10713,
+      "localBaseUrl": "http://localhost:10713"
+    },
+    "port": 10713
+  },
+  {
+    "dir": "GatewayOS",
+    "id": "gatewayos",
+    "name": "GatewayOS",
+    "package": "@appneurox/gatewayos",
+    "version": "1.0.0",
+    "description": "Gateway routing, traffic control, request validation, authentication gateway, service gateway, tenant gateway, edge gateway, and policy enforcement.",
+    "api": {
+      "basePath": "/v1/gateway",
+      "standalonePath": "/gatewayos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10714,
+      "localBaseUrl": "http://localhost:10714"
+    },
+    "port": 10714
+  },
+  {
+    "dir": "GovernanceOS",
+    "id": "governanceos",
+    "name": "GovernanceOS",
+    "package": "@appneurox/governanceos",
+    "version": "1.0.0",
+    "description": "Board governance, policies, board meetings, resolutions, and corporate governance",
+    "api": {
+      "basePath": "/v1/governance",
+      "standalonePath": "/governanceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9800,
+      "localBaseUrl": "http://localhost:9800"
+    },
+    "port": 9800
+  },
+  {
+    "dir": "GrowthOS",
+    "id": "growthos",
+    "name": "GrowthOS",
+    "package": "@appneurox/growthos",
+    "version": "1.0.0",
+    "description": "Growth strategy, campaigns, funnels, experiments, lead generation, activation, retention, and revenue growth",
+    "api": {
+      "basePath": "/v1/growth",
+      "standalonePath": "/growthos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "IdentityOS",
+    "id": "identityos",
+    "name": "IdentityOS",
+    "package": "@appneurox/identityos",
+    "version": "1.0.0",
+    "description": "Identity, authentication, authorization, user profile, account, role, permission, session, SSO, MFA, tenant identity, and identity governance",
+    "api": {
+      "basePath": "/v1/identity",
+      "standalonePath": "/identityos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "InfrastructureOS",
+    "id": "infraos",
+    "name": "InfrastructureOS",
+    "package": "@appneurox/infrastructureos",
+    "version": "1.0.0",
+    "description": "InfrastructureOS: Cloud infrastructure, servers, databases, networks, containers, deployments, and infrastructure lifecycle management",
+    "api": {
+      "basePath": "/v1/infra",
+      "standalonePath": "/infraos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10500,
+      "localBaseUrl": "http://localhost:10500"
+    },
+    "port": 10500
+  },
+  {
+    "dir": "IntegrationOS",
+    "id": "integrationos",
+    "name": "IntegrationOS",
+    "package": "@appneurox/integrationos",
+    "version": "1.0.0",
+    "description": "External integrations, connectors, sync rules, webhooks, OAuth, and integration marketplace",
+    "api": {
+      "basePath": "/v1/integrations",
+      "standalonePath": "/integrationos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10400,
+      "localBaseUrl": "http://localhost:10400"
+    },
+    "port": 10400
+  },
+  {
+    "dir": "InventoryOS",
+    "id": "inventoryos",
+    "name": "InventoryOS",
+    "package": "@appneurox/inventoryos",
+    "version": "1.0.0",
+    "description": "Inventory management, stock levels, warehouses, transfers, and inventory lifecycle",
+    "api": {
+      "basePath": "/v1/inventory",
+      "standalonePath": "/inventory",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11200,
+      "localBaseUrl": "http://localhost:11200"
+    },
+    "port": 11200
+  },
+  {
+    "dir": "KnowledgeOS",
+    "id": "knowledgeos",
+    "name": "KnowledgeOS",
+    "package": "@appneurox/knowledgeos",
+    "version": "1.0.0",
+    "description": "Knowledge base, documentation, SOP, wiki, search, organizational memory, RAG, FAQ, and knowledge reuse layer",
+    "api": {
+      "basePath": "/v1/knowledge",
+      "standalonePath": "/knowledgeos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 7200,
+      "localBaseUrl": "http://localhost:7200"
+    },
+    "port": 7200
+  },
+  {
+    "dir": "LearningOS",
+    "id": "learningos",
+    "name": "LearningOS",
+    "package": "@appneurox/learningos",
+    "version": "1.0.0",
+    "description": "LearningOS: Courses, lessons, assessments, certifications, learning paths, and training management",
+    "api": {
+      "basePath": "/v1/learning",
+      "standalonePath": "/learning",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10300,
+      "localBaseUrl": "http://localhost:10300"
+    },
+    "port": 10300
+  },
+  {
+    "dir": "LegalOS",
+    "id": "legalos",
+    "name": "LegalOS",
+    "package": "@appneurox/legalos",
+    "version": "1.0.0",
+    "description": "Legal cases, IP, privacy, terms, litigation, counsel, and legal operations",
+    "api": {
+      "basePath": "/v1/legal",
+      "standalonePath": "/legalos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9600,
+      "localBaseUrl": "http://localhost:9600"
+    },
+    "port": 9600
+  },
+  {
+    "dir": "LicenseOS",
+    "id": "licenseos",
+    "name": "LicenseOS",
+    "package": "@appneurox/licenseos",
+    "version": "1.0.0",
+    "description": "Software licenses, entitlements, usage tracking, compliance, renewals, and license lifecycle",
+    "api": {
+      "basePath": "/v1/license",
+      "standalonePath": "/licenseos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10700,
+      "localBaseUrl": "http://localhost:10700"
+    },
+    "port": 10700
+  },
+  {
+    "dir": "LocationOS",
+    "id": "locationos",
+    "name": "LocationOS",
+    "package": "@appneurox/locationos",
+    "version": "1.0.0",
+    "description": "Location, address, geolocation, routing, zones, and location management OS",
+    "api": {
+      "basePath": "/v1/locations",
+      "standalonePath": "/locationos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11300,
+      "localBaseUrl": "http://localhost:11300"
+    },
+    "port": 11300
+  },
+  {
+    "dir": "MarketplaceOS",
+    "id": "marketplaceos",
+    "name": "MarketplaceOS",
+    "package": "@appneurox/marketplaceos",
+    "version": "1.0.0",
+    "description": "Marketplace, listings, sellers, buyers, checkout, licensing, reviews, payouts, and multi-vendor commerce",
+    "api": {
+      "basePath": "/v1/marketplace",
+      "standalonePath": "/marketplaceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10600,
+      "localBaseUrl": "http://localhost:10600"
+    },
+    "port": 10600
+  },
+  {
+    "dir": "MediaOS",
+    "id": "mediaos",
+    "name": "MediaOS",
+    "package": "@appneurox/mediaos",
+    "version": "1.0.0",
+    "description": "MediaOS: images, videos, audio, thumbnails, compression, transcoding, brand assets, media processing, and media CDN layer",
+    "api": {
+      "basePath": "/v1/media",
+      "standalonePath": "/mediaos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6300,
+      "localBaseUrl": "http://localhost:6300"
+    },
+    "port": 6300
+  },
+  {
+    "dir": "MessagingOS",
+    "id": "messagingos",
+    "name": "MessagingOS",
+    "package": "@appneurox/messagingos",
+    "version": "1.0.0",
+    "description": "Email, SMS, WhatsApp, push notifications, inbox management, and message delivery",
+    "api": {
+      "basePath": "/v1/messaging",
+      "standalonePath": "/messaging",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12300,
+      "localBaseUrl": "http://localhost:12300"
+    },
+    "port": 12300
+  },
+  {
+    "dir": "NotificationOS",
+    "id": "notificationos",
+    "name": "NotificationOS",
+    "package": "@appneurox/notificationos",
+    "version": "1.0.0",
+    "description": "Communication delivery engine for emails, WhatsApp, SMS, push, in-app alerts, reminders, announcements, campaigns, and system alerts",
+    "api": {
+      "basePath": "/v1/notifications",
+      "standalonePath": "/notificationos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5900,
+      "localBaseUrl": "http://localhost:5900"
+    },
+    "port": 5900
+  },
+  {
+    "dir": "ObservabilityOS",
+    "id": "observabilityos",
+    "name": "ObservabilityOS",
+    "package": "@appneurox/observabilityos",
+    "version": "1.0.0",
+    "description": "Logs, metrics, traces, alerts, service health, cost visibility, reliability dashboards, and debugging context",
+    "api": {
+      "basePath": "/v1/observability",
+      "standalonePath": "/observability",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5700,
+      "localBaseUrl": "http://localhost:5700"
+    },
+    "port": 5700
+  },
+  {
+    "dir": "OnboardingOS",
+    "id": "onboardingos",
+    "name": "OnboardingOS",
+    "package": "@appneurox/onboardingos",
+    "version": "1.0.0",
+    "description": "Customer onboarding, employee onboarding, setup wizards, and onboarding workflows",
+    "api": {
+      "basePath": "/v1/onboarding",
+      "standalonePath": "/onboarding",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12500,
+      "localBaseUrl": "http://localhost:12500"
+    },
+    "port": 12500
+  },
+  {
+    "dir": "OperationsOS",
+    "id": "operationsos",
+    "name": "OperationsOS",
+    "package": "@appneurox/operationsos",
+    "version": "1.0.0",
+    "description": "Operating cadence, processes, tasks, resources, incidents, SOPs, and cross-team execution",
+    "api": {
+      "basePath": "/v1/operations",
+      "standalonePath": "/operations",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8100,
+      "localBaseUrl": "http://localhost:8100"
+    },
+    "port": 8100
+  },
+  {
+    "dir": "PartnerOS",
+    "id": "partneros",
+    "name": "PartnerOS",
+    "package": "@appneurox/partneros",
+    "version": "1.0.0",
+    "description": "Partner programs, relationships, enablement, joint GTM, revenue sharing, and partner lifecycle",
+    "api": {
+      "basePath": "/v1/partners",
+      "standalonePath": "/partneros",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10000,
+      "localBaseUrl": "http://localhost:10000"
+    },
+    "port": 10000
+  },
+  {
+    "dir": "PeopleOS",
+    "id": "peopleos",
+    "name": "PeopleOS",
+    "package": "@appneurox/peopleos",
+    "version": "1.0.0",
+    "description": "People operations engine: employees, hiring, onboarding, attendance, performance, engagement, and HR workflows",
+    "api": {
+      "basePath": "/v1/people",
+      "standalonePath": "/people",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8400,
+      "localBaseUrl": "http://localhost:8400"
+    },
+    "port": 8400
+  },
+  {
+    "dir": "PlatformOS",
+    "id": "platformos",
+    "name": "PlatformOS",
+    "package": "@appneurox/platformos",
+    "version": "1.0.0",
+    "description": "Base kernel, tenants, users, events, config, package runtime, and OS integration",
+    "api": {
+      "basePath": "/v1/platform",
+      "standalonePath": "/platformos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5000,
+      "localBaseUrl": "http://localhost:5000"
+    },
+    "port": 5000
+  },
+  {
+    "dir": "PolicyOS",
+    "id": "policyos",
+    "name": "PolicyOS",
+    "package": "@appneurox/policyos",
+    "version": "1.0.0",
+    "description": "PolicyOS: policies, rules, guardrails, access decisions, rate limits, approval rules, and enforcement",
+    "api": {
+      "basePath": "/v1/policy",
+      "standalonePath": "/policyos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5200,
+      "localBaseUrl": "http://localhost:5200"
+    },
+    "port": 5200
+  },
+  {
+    "dir": "ProcurementOS",
+    "id": "procurementos",
+    "name": "ProcurementOS",
+    "package": "@appneurox/procurementos",
+    "version": "1.0.0",
+    "description": "Purchase requests, vendor management, approvals, purchase orders, goods receipts, and procurement lifecycle management",
+    "api": {
+      "basePath": "/v1/procurement",
+      "standalonePath": "/procurementos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11100,
+      "localBaseUrl": "http://localhost:11100"
+    },
+    "port": 11100
+  },
+  {
+    "dir": "ProductOS",
+    "id": "productos",
+    "name": "ProductOS",
+    "package": "@appneurox/productos",
+    "version": "1.0.0",
+    "description": "Product strategy, roadmap, features, releases, feedback, and product operations",
+    "api": {
+      "basePath": "/v1/product",
+      "standalonePath": "/productos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9000,
+      "localBaseUrl": "http://localhost:9000"
+    },
+    "port": 9000
+  },
+  {
+    "dir": "ProjectOS",
+    "id": "projectos",
+    "name": "ProjectOS",
+    "package": "@appneurox/projectos",
+    "version": "1.0.0",
+    "description": "Project management OS for projects, milestones, sprints, tasks, resources, budgets, and project lifecycle",
+    "api": {
+      "basePath": "/v1/projects",
+      "standalonePath": "/projectos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11400,
+      "localBaseUrl": "http://localhost:11400"
+    },
+    "port": 11400
+  },
+  {
+    "dir": "QualityOS",
+    "id": "qualityos",
+    "name": "QualityOS",
+    "package": "@appneurox/qualityos",
+    "version": "1.0.0",
+    "description": "QualityOS: QA processes, test cases, bug tracking, feedback, satisfaction, and quality metrics",
+    "api": {
+      "basePath": "/v1/quality",
+      "standalonePath": "/qualityos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9900,
+      "localBaseUrl": "http://localhost:9900"
+    },
+    "port": 9900
+  },
+  {
+    "dir": "ResearchOS",
+    "id": "researchos",
+    "name": "ResearchOS",
+    "package": "@appneurox/researchos",
+    "version": "1.0.0",
+    "description": "ResearchOS: research questions, studies, sources, notes, hypotheses, evidence, insights, and synthesis for market, competitor, and user research",
+    "api": {
+      "basePath": "/v1/research",
+      "standalonePath": "/researchos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 7300,
+      "localBaseUrl": "http://localhost:7300"
+    },
+    "port": 7300
+  },
+  {
+    "dir": "ResourceOS",
+    "id": "resourceos",
+    "name": "ResourceOS",
+    "package": "@appneurox/resourceos",
+    "version": "1.0.0",
+    "description": "Resource allocation, capacity planning, utilization tracking, and resource booking",
+    "api": {
+      "basePath": "/v1/resource",
+      "standalonePath": "/resourceos",
+      "docsPath": "/docs"
+    },
+    "runtime": {}
+  },
+  {
+    "dir": "SalesOS",
+    "id": "salesos",
+    "name": "SalesOS",
+    "package": "@appneurox/salesos",
+    "version": "1.0.0",
+    "description": "Lead, prospect, pipeline, deal, proposal, follow-up, sales automation, and revenue conversion management",
+    "api": {
+      "basePath": "/v1/sales",
+      "standalonePath": "/salesos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8500,
+      "localBaseUrl": "http://localhost:8500"
+    },
+    "port": 8500
+  },
+  {
+    "dir": "SchedulingOS",
+    "id": "schedulingos",
+    "name": "SchedulingOS",
+    "package": "@appneurox/schedulingos",
+    "version": "1.0.0",
+    "description": "Scheduling, appointments, availability, calendars, bookings, reminders, and time-based coordination",
+    "api": {
+      "basePath": "/v1/scheduling",
+      "standalonePath": "/schedulingos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11500,
+      "localBaseUrl": "http://localhost:11500"
+    },
+    "port": 11500
+  },
+  {
+    "dir": "SearchOS",
+    "id": "searchos",
+    "name": "SearchOS",
+    "package": "@appneurox/searchos",
+    "version": "1.0.0",
+    "description": "Global, semantic, vector, and filtered search across OS data, files, knowledge, and records",
+    "api": {
+      "basePath": "/v1/search",
+      "standalonePath": "/searchos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6100,
+      "localBaseUrl": "http://localhost:6100"
+    },
+    "port": 6100
+  },
+  {
+    "dir": "SecretOS",
+    "id": "secretos",
+    "name": "SecretOS",
+    "package": "@appneurox/secretos",
+    "version": "1.0.0",
+    "description": "Secrets, credentials, tokens, encryption keys, rotation, and secure secret access",
+    "api": {
+      "basePath": "/v1/secrets",
+      "standalonePath": "/secretos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5400,
+      "localBaseUrl": "http://localhost:5400"
+    },
+    "port": 5400
+  },
+  {
+    "dir": "SecurityOS",
+    "id": "securityos",
+    "name": "SecurityOS",
+    "package": "@appneurox/securityos",
+    "version": "1.0.0",
+    "description": "Auth, roles, permissions, policies, approvals, secrets, and audit",
+    "api": {
+      "basePath": "/v1/security",
+      "standalonePath": "/securityos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 5400,
+      "localBaseUrl": "http://localhost:5400"
+    },
+    "port": 5400
+  },
+  {
+    "dir": "SupportOS",
+    "id": "supportos",
+    "name": "SupportOS",
+    "package": "@appneurox/supportos",
+    "version": "1.0.0",
+    "description": "Customer support, helpdesk, ticketing, SLA, knowledge base, escalation, and support quality management",
+    "api": {
+      "basePath": "/v1/support",
+      "standalonePath": "/supportos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 8900,
+      "localBaseUrl": "http://localhost:8900"
+    },
+    "port": 8900
+  },
+  {
+    "dir": "SurveyOS",
+    "id": "surveyos",
+    "name": "SurveyOS",
+    "package": "@appneurox/surveyos",
+    "version": "1.0.0",
+    "description": "Surveys, polls, feedback collection, quiz assessments, and response analytics",
+    "api": {
+      "basePath": "/v1/surveys",
+      "standalonePath": "/surveyos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12000,
+      "localBaseUrl": "http://localhost:12000"
+    },
+    "port": 12000
+  },
+  {
+    "dir": "TaskOS",
+    "id": "taskos",
+    "name": "TaskOS",
+    "package": "@appneurox/taskos",
+    "version": "1.0.0",
+    "description": "Tasks, assignments, checklists, action items, ownership, priorities, deadlines, dependencies, approvals, execution tracking, and productivity coordination.",
+    "api": {
+      "basePath": "/v1/task",
+      "standalonePath": "/taskos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10716,
+      "localBaseUrl": "http://localhost:10716"
+    },
+    "port": 10716
+  },
+  {
+    "dir": "TemplateOS",
+    "id": "templateos",
+    "name": "TemplateOS",
+    "package": "@appneurox/templateos",
+    "version": "1.0.0",
+    "description": "Reusable blueprints, templates, patterns, starter kits for apps, documents, workflows, prompts, agents, websites, emails, and business processes",
+    "api": {
+      "basePath": "/v1/templates",
+      "standalonePath": "/templateos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6800,
+      "localBaseUrl": "http://localhost:6800"
+    },
+    "port": 6800
+  },
+  {
+    "dir": "ToolOS",
+    "id": "toolos",
+    "name": "ToolOS",
+    "package": "@appneurox/toolos",
+    "version": "1.0.0",
+    "description": "Reusable tool registry and execution gateway for APPNEUROX.",
+    "api": {
+      "basePath": "/v1/tools",
+      "standalonePath": "/v1/tools",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6700,
+      "localBaseUrl": "http://localhost:6700"
+    },
+    "port": 6700
+  },
+  {
+    "dir": "UnifiedOS",
+    "id": "unifiedos",
+    "name": "UnifiedOS",
+    "package": "@appneurox/unifiedos",
+    "version": "1.0.0",
+    "description": "Cross-OS orchestration that connects all AppNeuroX OS modules into one registry, dependency graph, workflow layer, event layer, and command center.",
+    "api": {
+      "basePath": "/v1/unified",
+      "standalonePath": "/unifiedos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 10717,
+      "localBaseUrl": "http://localhost:10717"
+    },
+    "port": 10717
+  },
+  {
+    "dir": "UTMOS",
+    "id": "utmos",
+    "name": "UTMOS",
+    "package": "@appneurox/utmos",
+    "version": "1.0.0",
+    "description": "UTM parameter management, campaign tracking, attribution, and marketing analytics for Appneural platforms",
+    "api": {
+      "basePath": "/v1/utm",
+      "standalonePath": "/utmos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 12400,
+      "localBaseUrl": "http://localhost:12400"
+    },
+    "port": 12400
+  },
+  {
+    "dir": "VendorOS",
+    "id": "vendoros",
+    "name": "VendorOS",
+    "package": "@appneurox/vendoros",
+    "version": "1.0.0",
+    "description": "Vendor management, relationships, performance tracking, contracts, and vendor lifecycle",
+    "api": {
+      "basePath": "/v1/vendor",
+      "standalonePath": "/vendoros",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 11900,
+      "localBaseUrl": "http://localhost:11900"
+    },
+    "port": 11900
+  },
+  {
+    "dir": "WebsiteOS",
+    "id": "websiteos",
+    "name": "WebsiteOS",
+    "package": "@appneurox/websiteos",
+    "version": "1.0.0",
+    "description": "Website building, page generation, SEO, AEO/GEO, CMS, landing pages, forms, analytics, and publishing",
+    "api": {
+      "basePath": "/v1/website",
+      "standalonePath": "/websiteos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 9300,
+      "localBaseUrl": "http://localhost:9300"
+    },
+    "port": 9300
+  },
+  {
+    "dir": "WorkflowOS",
+    "id": "workflowos",
+    "name": "WorkflowOS",
+    "package": "@appneurox/workflowos",
+    "version": "1.0.0",
+    "description": "Workflow orchestration: triggers, actions, conditions, approvals, escalations, state management, execution, and monitoring",
+    "api": {
+      "basePath": "/v1/workflows",
+      "standalonePath": "/workflowos",
+      "docsPath": "/docs"
+    },
+    "runtime": {
+      "port": 6000,
+      "localBaseUrl": "http://localhost:6000"
+    },
+    "port": 6000
+  }
+]

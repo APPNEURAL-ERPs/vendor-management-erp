@@ -1,0 +1,76 @@
+{
+  "id": "contentos",
+  "name": "ContentOS",
+  "package": "@appneurox/contentos",
+  "version": "1.0.0",
+  "description": "Content creation, publishing, CMS, blogs, SEO, localization, and content lifecycle management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ContentOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/content",
+    "standalonePath": "/contentos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "content.post.create",
+    "content.blog.publish",
+    "content.strategy.plan"
+  ],
+  "workflows": [
+    "content.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "content.created",
+      "content.updated",
+      "content.published",
+      "content.archived"
+    ],
+    "subscribes": [
+      "brandos.updated",
+      "websiteos.updated"
+    ]
+  },
+  "permissions": [
+    "content.read",
+    "content.write",
+    "content.publish",
+    "content.seo.manage",
+    "content.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/brandos"
+    ],
+    "optional": [
+      "@appneurox/websiteos",
+      "@appneurox/growthos"
+    ]
+  },
+  "dataClassification": "internal",
+  "contentSafetyLevel": "approval-required-for-publish",
+  "relatedSystems": [
+    "platformos",
+    "brandos",
+    "websiteos",
+    "growthos"
+  ],
+  "runtime": {
+    "port": 9200,
+    "localBaseUrl": "http://localhost:9200"
+  }
+}

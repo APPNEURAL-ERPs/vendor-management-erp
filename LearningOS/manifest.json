@@ -1,0 +1,93 @@
+{
+  "id": "learningos",
+  "name": "LearningOS",
+  "package": "@appneurox/learningos",
+  "version": "1.0.0",
+  "description": "LearningOS: Courses, lessons, assessments, certifications, learning paths, and training management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "LearningOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/learning",
+    "standalonePath": "/learning",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "learning.course.create",
+    "learning.lesson.create",
+    "learning.enrollment.create",
+    "learning.certificate.generate",
+    "learning.assessment.create",
+    "learning.progress.track"
+  ],
+  "workflows": [
+    "learning.enrollment.workflow",
+    "learning.certificate.workflow",
+    "learning.progress.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "learning.course.created",
+      "learning.course.updated",
+      "learning.enrollment.created",
+      "learning.lesson.completed",
+      "learning.certificate.issued"
+    ],
+    "subscribes": [
+      "careeros.skill.proof.added",
+      "communityos.badge.awarded",
+      "analyticsos.learning.updated"
+    ]
+  },
+  "permissions": [
+    "learning.course.read",
+    "learning.course.write",
+    "learning.lesson.read",
+    "learning.lesson.write",
+    "learning.enrollment.read",
+    "learning.enrollment.write",
+    "learning.assessment.read",
+    "learning.assessment.write",
+    "learning.certificate.read",
+    "learning.certificate.write",
+    "learning.progress.read",
+    "learning.progress.write",
+    "learning.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/careeros",
+      "@appneurox/communityos",
+      "@appneurox/analyticsos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "careeros",
+    "communityos",
+    "analyticsos",
+    "contentos",
+    "certificateos",
+    "platformos"
+  ],
+  "runtime": {
+    "port": 10300,
+    "localBaseUrl": "http://localhost:10300"
+  }
+}

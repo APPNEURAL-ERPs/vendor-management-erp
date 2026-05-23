@@ -1,0 +1,3 @@
+export function docs() {
+  return { name: "UnifiedOS", package: "@appneurox/unifiedos", purpose: "Cross-OS orchestration that connects all AppNeuroX OS modules into one registry, dependency graph, workflow layer, event layer, and command center.", owns: ["OSModule","OSDependency","CrossOSWorkflow","OSEventRoute","UnifiedCommand","HealthSignal","ImpactReport","IntegrationMap"], routes: ["GET /health", "GET /docs", "GET /unifiedos/overview", "GET /unifiedos/items", "POST /unifiedos/items", "GET /unifiedos/items/:id", "PATCH /unifiedos/items/:id", "DELETE /unifiedos/items/:id", "GET /unifiedos/runs", "POST /unifiedos/runs", "GET /unifiedos/events", "GET /unifiedos/audit"] };
+}

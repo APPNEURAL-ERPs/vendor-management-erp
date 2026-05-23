@@ -1,0 +1,36 @@
+{
+  "name": "@appneurox/resourceos",
+  "version": "1.0.0",
+  "description": "Resource allocation, capacity planning, utilization tracking, and resource booking",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "seed": "ts-node src/scripts/seed.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "appneuro",
+    "resource-management",
+    "allocation",
+    "capacity-planning",
+    "utilization-tracking",
+    "booking"
+  ],
+  "author": "APPNEURAL",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

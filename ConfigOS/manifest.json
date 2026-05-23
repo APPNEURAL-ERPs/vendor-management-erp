@@ -1,0 +1,77 @@
+{
+  "id": "configos",
+  "name": "ConfigOS",
+  "package": "@appneurox/configos",
+  "version": "1.0.0",
+  "description": "Runtime configuration, tenant settings, feature flags, environment config, and OS-level settings management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ConfigOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/config",
+    "standalonePath": "/configos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "config.get",
+    "config.set",
+    "config.feature_flag.toggle",
+    "config.tenant.override"
+  ],
+  "workflows": [
+    "config.default.workflow"
+  ],
+  "agents": [
+    "config.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "config.created",
+      "config.updated",
+      "config.deleted",
+      "config.rollback.performed",
+      "config.flag.toggled"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "config.read",
+    "config.write",
+    "config.feature_flag.manage",
+    "config.tenant.manage",
+    "config.environment.manage",
+    "config.audit.read",
+    "config.rollback.perform"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "secretos",
+    "policyos"
+  ],
+  "runtime": {
+    "port": 5500,
+    "localBaseUrl": "http://localhost:5500"
+  }
+}

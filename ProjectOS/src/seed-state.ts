@@ -1,0 +1,558 @@
+import { ProjectState } from "./core/domain";
+import { emptyState } from "./core/datastore";
+import { nowIso, plusDays, newId } from "./core/id";
+
+export function createSeedState(tenantId = "demo-tenant"): ProjectState {
+  const state = emptyState();
+  const createdAt = nowIso();
+  const projectId = newId("project");
+
+  state.projects.push({
+    id: projectId,
+    tenantId,
+    createdAt,
+    updatedAt: createdAt,
+    key: "website-redesign",
+    name: "ABC Technologies Website Redesign",
+    description: "Complete redesign and development of the ABC Technologies corporate website",
+    ownerId: "user_pm_1",
+    managerId: "user_pm_2",
+    status: "active",
+    priority: "high",
+    health: "healthy",
+    startDate: createdAt,
+    endDate: plusDays(60),
+    tags: ["website", "design", "development", "client"],
+    metadata: { client: "ABC Technologies", contractValue: 50000 }
+  });
+
+  state.milestones.push(
+    {
+      id: newId("milestone"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "discovery",
+      name: "Discovery Phase",
+      description: "Requirements gathering and analysis",
+      status: "completed",
+      approvalStatus: "approved",
+      ownerId: "user_pm_2",
+      dueDate: plusDays(10),
+      completedAt: plusDays(9),
+      order: 1,
+      billingPercentage: 20,
+      metadata: {}
+    },
+    {
+      id: newId("milestone"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "design",
+      name: "Design Phase",
+      description: "UI/UX design and mockups",
+      status: "in_progress",
+      approvalStatus: "pending",
+      ownerId: "user_designer_1",
+      dueDate: plusDays(25),
+      order: 2,
+      billingPercentage: 30,
+      metadata: {}
+    },
+    {
+      id: newId("milestone"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "development",
+      name: "Development Phase",
+      description: "Frontend and backend development",
+      status: "not_started",
+      approvalStatus: "pending",
+      ownerId: "user_dev_1",
+      dueDate: plusDays(45),
+      order: 3,
+      billingPercentage: 30,
+      metadata: {}
+    },
+    {
+      id: newId("milestone"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "launch",
+      name: "Launch",
+      description: "QA, deployment and go-live",
+      status: "not_started",
+      approvalStatus: "pending",
+      ownerId: "user_dev_2",
+      dueDate: plusDays(60),
+      order: 4,
+      billingPercentage: 20,
+      metadata: {}
+    }
+  );
+
+  const sprint1Id = newId("sprint");
+  const sprint2Id = newId("sprint");
+
+  state.sprints.push(
+    {
+      id: sprint1Id,
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "sprint-1",
+      name: "Sprint 1 - Design Foundation",
+      description: "Initial design mockups and prototypes",
+      status: "completed",
+      goal: "Complete homepage and key page mockups",
+      startDate: plusDays(10),
+      endDate: plusDays(20),
+      completedAt: plusDays(19),
+      velocity: 21,
+      capacity: 20,
+      order: 1,
+      metadata: {}
+    },
+    {
+      id: sprint2Id,
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "sprint-2",
+      name: "Sprint 2 - Design Refinement",
+      description: "Refine designs and create remaining pages",
+      status: "active",
+      goal: "Complete all page designs for client review",
+      startDate: plusDays(20),
+      endDate: plusDays(30),
+      velocity: 0,
+      capacity: 22,
+      order: 2,
+      metadata: {}
+    }
+  );
+
+  const milestoneDesignId = state.milestones[1].id;
+
+  state.tasks.push(
+    {
+      id: newId("task"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      sprintId: sprint1Id,
+      milestoneId: milestoneDesignId,
+      key: "homepage-design",
+      title: "Design Homepage Mockup",
+      description: "Create high-fidelity homepage design with hero section, features, and CTA",
+      status: "done",
+      priority: "high",
+      assigneeId: "user_designer_1",
+      reporterId: "user_pm_2",
+      storyPoints: 5,
+      estimatedHours: 16,
+      actualHours: 14,
+      completedAt: plusDays(14),
+      order: 1,
+      tags: ["design", "homepage"],
+      metadata: {}
+    },
+    {
+      id: newId("task"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      sprintId: sprint1Id,
+      milestoneId: milestoneDesignId,
+      key: "about-page-design",
+      title: "Design About Page",
+      description: "Create about page with team section and company story",
+      status: "done",
+      priority: "medium",
+      assigneeId: "user_designer_1",
+      reporterId: "user_pm_2",
+      storyPoints: 3,
+      estimatedHours: 8,
+      actualHours: 9,
+      completedAt: plusDays(17),
+      order: 2,
+      tags: ["design", "about"],
+      metadata: {}
+    },
+    {
+      id: newId("task"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      sprintId: sprint2Id,
+      milestoneId: milestoneDesignId,
+      key: "services-page-design",
+      title: "Design Services Page",
+      description: "Create services page with service cards and pricing",
+      status: "in_progress",
+      priority: "high",
+      assigneeId: "user_designer_1",
+      reporterId: "user_pm_2",
+      storyPoints: 5,
+      estimatedHours: 16,
+      actualHours: 10,
+      startDate: plusDays(20),
+      order: 1,
+      tags: ["design", "services"],
+      metadata: {}
+    },
+    {
+      id: newId("task"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      sprintId: sprint2Id,
+      milestoneId: milestoneDesignId,
+      key: "contact-page-design",
+      title: "Design Contact Page",
+      description: "Create contact page with form and map",
+      status: "todo",
+      priority: "medium",
+      assigneeId: "user_designer_2",
+      reporterId: "user_pm_2",
+      storyPoints: 3,
+      estimatedHours: 8,
+      order: 2,
+      tags: ["design", "contact"],
+      metadata: {}
+    },
+    {
+      id: newId("task"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      sprintId: sprint2Id,
+      milestoneId: milestoneDesignId,
+      key: "responsive-review",
+      title: "Responsive Design Review",
+      description: "Review all designs for mobile responsiveness",
+      status: "todo",
+      priority: "high",
+      assigneeId: "user_designer_1",
+      reporterId: "user_pm_2",
+      storyPoints: 2,
+      estimatedHours: 6,
+      order: 3,
+      tags: ["design", "responsive"],
+      metadata: {}
+    }
+  );
+
+  state.resources.push(
+    {
+      id: newId("resource"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "dev-lead",
+      name: "Development Lead",
+      type: "developer",
+      description: "Senior full-stack developer leading the project",
+      allocatedUserId: "user_dev_1",
+      allocationPercentage: 80,
+      hourlyRate: 75,
+      status: "active",
+      metadata: {}
+    },
+    {
+      id: newId("resource"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "frontend-dev",
+      name: "Frontend Developer",
+      type: "developer",
+      description: "React and Next.js specialist",
+      allocatedUserId: "user_dev_2",
+      allocationPercentage: 100,
+      hourlyRate: 60,
+      status: "active",
+      metadata: {}
+    },
+    {
+      id: newId("resource"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "designer-1",
+      name: "Lead Designer",
+      type: "designer",
+      description: "Senior UI/UX designer",
+      allocatedUserId: "user_designer_1",
+      allocationPercentage: 100,
+      hourlyRate: 55,
+      status: "active",
+      metadata: {}
+    },
+    {
+      id: newId("resource"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "designer-2",
+      name: "UI Designer",
+      type: "designer",
+      description: "UI designer for secondary pages",
+      allocatedUserId: "user_designer_2",
+      allocationPercentage: 50,
+      hourlyRate: 45,
+      status: "active",
+      metadata: {}
+    },
+    {
+      id: newId("resource"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "qa-engineer",
+      name: "QA Engineer",
+      type: "qa",
+      description: "Quality assurance specialist",
+      allocatedUserId: "user_qa_1",
+      allocationPercentage: 30,
+      hourlyRate: 50,
+      status: "active",
+      metadata: {}
+    }
+  );
+
+  state.budgets.push({
+    id: newId("budget"),
+    tenantId,
+    createdAt,
+    updatedAt: createdAt,
+    projectId,
+    key: "main-budget",
+    name: "Project Main Budget",
+    description: "Main budget for website redesign project",
+    status: "approved",
+    estimatedCost: 55000,
+    approvedBudget: 50000,
+    actualCost: 12000,
+    resourceCost: 9500,
+    toolCost: 1500,
+    cloudCost: 500,
+    aiCost: 300,
+    vendorCost: 200,
+    contingencyBudget: 5000,
+    remainingBudget: 38000,
+    profitMargin: 20,
+    currency: "USD",
+    metadata: {}
+  });
+
+  state.timeEntries.push(
+    {
+      id: newId("timeentry"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      taskId: state.tasks[0].id,
+      resourceId: state.resources[2].id,
+      userId: "user_designer_1",
+      description: "Homepage design work",
+      date: plusDays(-5),
+      hours: 8,
+      billable: true,
+      billingRate: 55,
+      billingAmount: 440,
+      metadata: {}
+    },
+    {
+      id: newId("timeentry"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      taskId: state.tasks[0].id,
+      resourceId: state.resources[2].id,
+      userId: "user_designer_1",
+      description: "Homepage design refinements",
+      date: plusDays(-4),
+      hours: 6,
+      billable: true,
+      billingRate: 55,
+      billingAmount: 330,
+      metadata: {}
+    },
+    {
+      id: newId("timeentry"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      taskId: state.tasks[1].id,
+      resourceId: state.resources[2].id,
+      userId: "user_designer_1",
+      description: "About page design",
+      date: plusDays(-2),
+      hours: 9,
+      billable: true,
+      billingRate: 55,
+      billingAmount: 495,
+      metadata: {}
+    }
+  );
+
+  state.phases.push(
+    {
+      id: newId("phase"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "discovery",
+      name: "Discovery",
+      description: "Initial project discovery and requirements gathering",
+      status: "completed",
+      order: 1,
+      startDate: createdAt,
+      endDate: plusDays(10),
+      completedAt: plusDays(9),
+      metadata: {}
+    },
+    {
+      id: newId("phase"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "design",
+      name: "Design",
+      description: "UI/UX design phase",
+      status: "active",
+      order: 2,
+      startDate: plusDays(10),
+      endDate: plusDays(30),
+      metadata: {}
+    },
+    {
+      id: newId("phase"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "development",
+      name: "Development",
+      description: "Frontend and backend development",
+      status: "draft",
+      order: 3,
+      startDate: plusDays(30),
+      endDate: plusDays(50),
+      metadata: {}
+    },
+    {
+      id: newId("phase"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "qa-launch",
+      name: "QA & Launch",
+      description: "Quality assurance and go-live",
+      status: "draft",
+      order: 4,
+      startDate: plusDays(50),
+      endDate: plusDays(60),
+      metadata: {}
+    }
+  );
+
+  state.risks.push(
+    {
+      id: newId("risk"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "client-feedback-delay",
+      title: "Client feedback delay",
+      description: "Risk of client not providing timely feedback on design mockups",
+      category: "client",
+      level: "medium",
+      status: "identified",
+      ownerId: "user_pm_2",
+      probability: 40,
+      impact: 30,
+      mitigationPlan: "Schedule weekly feedback sessions and set clear deadlines",
+      dueDate: plusDays(25),
+      metadata: {}
+    },
+    {
+      id: newId("risk"),
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      projectId,
+      key: "scope-creep",
+      title: "Scope creep during development",
+      description: "Additional features may be requested during development",
+      category: "scope",
+      level: "high",
+      status: "identified",
+      ownerId: "user_pm_2",
+      probability: 50,
+      impact: 40,
+      mitigationPlan: "Implement strict change request process and document all scope changes",
+      dueDate: plusDays(45),
+      metadata: {}
+    }
+  );
+
+  state.issues.push({
+    id: newId("issue"),
+    tenantId,
+    createdAt,
+    updatedAt: createdAt,
+    projectId,
+    key: "design-tool-license",
+    title: "Figma license expired",
+    description: "Need to renew Figma team license for design collaboration",
+    status: "assigned",
+    priority: "high",
+    ownerId: "user_designer_1",
+    reporterId: "user_pm_2",
+    dueDate: plusDays(22),
+    metadata: {}
+  });
+
+  state.auditLogs.push({
+    id: newId("audit"),
+    tenantId,
+    createdAt,
+    updatedAt: createdAt,
+    actorId: "user_pm_2",
+    role: "project_manager",
+    action: "project.create",
+    entityType: "project",
+    entityId: projectId,
+    after: { name: "ABC Technologies Website Redesign" }
+  });
+
+  return state;
+}

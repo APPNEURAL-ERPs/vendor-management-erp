@@ -1,0 +1,37 @@
+{
+  "name": "@appneurox/entityos",
+  "version": "1.0.0",
+  "description": "EntityOS: Universal business object definitions, schemas, records, relationships, lifecycle, ownership, validation, search, audit, and metadata.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/entityos.db.json && npm run seed",
+    "test": "npm run build"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "entityos",
+    "operating-system",
+    "sdk"
+  ],
+  "appneurox": {
+    "os": "entityos",
+    "domain": "entity",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

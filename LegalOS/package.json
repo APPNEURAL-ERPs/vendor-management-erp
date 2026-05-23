@@ -1,0 +1,38 @@
+{
+  "name": "@appneurox/legalos",
+  "version": "1.0.0",
+  "description": "LegalOS: Legal cases, IP, privacy, terms, litigation, counsel, and legal operations",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/legalos.db.json && npm run build && node dist/main.js",
+    "test": "npm run build && echo 'LegalOS tests placeholder'"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "legalos",
+    "legal",
+    "contracts",
+    "litigation",
+    "operating-system"
+  ],
+  "appneurox": {
+    "os": "legalos",
+    "domain": "legal",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "licenseos",
+  "name": "LicenseOS",
+  "package": "@appneurox/licenseos",
+  "version": "1.0.0",
+  "description": "Software licenses, entitlements, usage tracking, compliance, renewals, and license lifecycle",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "LicenseOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/license",
+    "standalonePath": "/licenseos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "license.create",
+    "license.validate",
+    "license.renew",
+    "license.suspend",
+    "license.revoke"
+  ],
+  "workflows": [
+    "license.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "license.created",
+      "license.activated",
+      "license.expired",
+      "license.renewed",
+      "license.suspended",
+      "license.revoked",
+      "quota.exceeded",
+      "seat.assigned",
+      "seat.released"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "license.read",
+    "license.write",
+    "license.validate",
+    "license.manage",
+    "license.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "billingos",
+    "marketplaceos",
+    "identityos",
+    "platformos",
+    "securityos"
+  ],
+  "runtime": {
+    "port": 10700,
+    "localBaseUrl": "http://localhost:10700"
+  }
+}

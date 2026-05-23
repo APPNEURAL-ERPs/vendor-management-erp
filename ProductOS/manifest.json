@@ -1,0 +1,75 @@
+{
+  "id": "productos",
+  "name": "ProductOS",
+  "package": "@appneurox/productos",
+  "version": "1.0.0",
+  "description": "Product strategy, roadmap, features, releases, feedback, and product operations",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ProductOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/product",
+    "standalonePath": "/productos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "product.item.create",
+    "product.workflow.start",
+    "product.policy.apply"
+  ],
+  "workflows": [
+    "product.default.workflow"
+  ],
+  "agents": [
+    "product.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "product.item.created",
+      "product.item.updated",
+      "product.workflow.started"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "product.item.read",
+    "product.item.write",
+    "product.workflow.run",
+    "product.policy.manage",
+    "product.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/researchos",
+      "@appneurox/qualityos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "researchos",
+    "qualityos",
+    "platformos",
+    "securityos"
+  ],
+  "runtime": {
+    "port": 9000,
+    "localBaseUrl": "http://localhost:9000"
+  }
+}

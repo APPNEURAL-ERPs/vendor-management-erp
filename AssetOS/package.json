@@ -1,0 +1,37 @@
+{
+  "name": "@appneurox/assetos",
+  "version": "1.0.0",
+  "description": "AssetOS: Asset lifecycle, fixed assets, IT assets, equipment, assignment, handover, maintenance, depreciation, warranty, and asset governance.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/assetos.db.json && npm run seed",
+    "test": "npm run build"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "assetos",
+    "operating-system",
+    "sdk"
+  ],
+  "appneurox": {
+    "os": "assetos",
+    "domain": "asset",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

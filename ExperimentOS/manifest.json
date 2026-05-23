@@ -1,0 +1,73 @@
+{
+  "id": "experimentos",
+  "name": "ExperimentOS",
+  "package": "@appneurox/experimentos",
+  "version": "1.0.0",
+  "description": "A/B testing, experiments, variants, metrics, statistical analysis, and experimentation lifecycle",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ExperimentOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/experiments",
+    "standalonePath": "/experimentos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "experiment.create",
+    "experiment.variant.add",
+    "experiment.start",
+    "experiment.stop"
+  ],
+  "workflows": [
+    "experiment.default.workflow"
+  ],
+  "agents": [
+    "experiment.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "experiment.created",
+      "experiment.started",
+      "experiment.stopped",
+      "experiment.completed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "experiment.read",
+    "experiment.write",
+    "experiment.run",
+    "experiment.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "analyticsos",
+    "growthos"
+  ],
+  "runtime": {
+    "port": 11000,
+    "localBaseUrl": "http://localhost:11000"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "unifiedos",
+  "name": "UnifiedOS",
+  "package": "@appneurox/unifiedos",
+  "version": "1.0.0",
+  "description": "Cross-OS orchestration that connects all AppNeuroX OS modules into one registry, dependency graph, workflow layer, event layer, and command center.",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "UnifiedOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/unified",
+    "standalonePath": "/unifiedos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "unified.create",
+    "unified.update",
+    "unified.run",
+    "unified.report"
+  ],
+  "workflows": [
+    "unified.default.workflow",
+    "unified.approval.workflow",
+    "unified.lifecycle.workflow"
+  ],
+  "agents": [
+    "unified.assistant",
+    "unified.reviewer",
+    "unified.automation-agent"
+  ],
+  "events": {
+    "publishes": [
+      "unified.created",
+      "unified.updated",
+      "unified.run.completed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "unified.read",
+    "unified.write",
+    "unified.run",
+    "unified.report",
+    "unified.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/eventos",
+      "@appneurox/workflowos",
+      "@appneurox/observabilityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "eventos",
+    "workflowos",
+    "observabilityos"
+  ],
+  "runtime": {
+    "port": 10717,
+    "localBaseUrl": "http://localhost:10717"
+  }
+}

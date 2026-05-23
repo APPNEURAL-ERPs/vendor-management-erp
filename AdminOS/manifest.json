@@ -1,0 +1,79 @@
+{
+  "id": "adminos",
+  "name": "AdminOS",
+  "package": "@appneurox/adminos",
+  "version": "1.0.0",
+  "description": "AdminOS: administrative control center for settings, resources, approvals, operations, and internal configuration.",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "AdminOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/admin",
+    "standalonePath": "/adminos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "admin.setting.manage",
+    "admin.org.manage",
+    "admin.request.process",
+    "admin.resource.allocate"
+  ],
+  "workflows": [
+    "admin.default.workflow"
+  ],
+  "agents": [],
+  "events": {
+    "publishes": [
+      "admin.setting.updated",
+      "admin.request.created",
+      "admin.request.approved",
+      "admin.request.rejected"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "admin.settings.read",
+    "admin.settings.write",
+    "admin.org.read",
+    "admin.org.write",
+    "admin.request.read",
+    "admin.request.write",
+    "admin.resource.read",
+    "admin.resource.write",
+    "admin.approval.read",
+    "admin.approval.write",
+    "admin.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/securityos",
+      "@appneurox/auditos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "auditos"
+  ],
+  "runtime": {
+    "port": 8200,
+    "localBaseUrl": "http://localhost:8200"
+  }
+}

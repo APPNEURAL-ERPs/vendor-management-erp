@@ -1,0 +1,734 @@
+{
+  "calendars": [
+    {
+      "id": "cal_main",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Main Calendar",
+      "description": "Primary calendar for team scheduling",
+      "ownerId": "user_admin",
+      "type": "team",
+      "timezone": "UTC",
+      "status": "active",
+      "metadata": {}
+    },
+    {
+      "id": "cal_consultations",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Consultation Calendar",
+      "description": "Calendar for client consultations and demos",
+      "ownerId": "user_sales",
+      "type": "booking",
+      "timezone": "UTC",
+      "status": "active",
+      "metadata": {}
+    },
+    {
+      "id": "cal_training",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Training Calendar",
+      "description": "Calendar for training sessions and classes",
+      "ownerId": "user_trainer",
+      "type": "team",
+      "timezone": "UTC",
+      "status": "active",
+      "metadata": {}
+    }
+  ],
+  "schedules": [
+    {
+      "id": "sched_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_main",
+      "title": "Weekly Team Standup",
+      "description": "Regular team sync meeting",
+      "type": "meeting",
+      "status": "confirmed",
+      "startTime": "2026-05-24T02:43:46.043Z",
+      "endTime": "2026-05-24T02:43:46.043Z",
+      "durationMinutes": 30,
+      "timezone": "UTC",
+      "location": "Conference Room A",
+      "meetingLink": "https://meet.example.com/standup",
+      "ownerId": "user_admin",
+      "attendeeIds": [
+        "user_admin",
+        "user_sales",
+        "user_support"
+      ],
+      "resourceIds": [],
+      "reminderIds": [],
+      "metadata": {
+        "recurring": "weekly",
+        "day": "monday"
+      }
+    },
+    {
+      "id": "sched_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_main",
+      "title": "Product Roadmap Review",
+      "description": "Quarterly product review meeting",
+      "type": "meeting",
+      "status": "scheduled",
+      "startTime": "2026-05-30T02:43:46.043Z",
+      "endTime": "2026-05-30T02:43:46.043Z",
+      "durationMinutes": 120,
+      "timezone": "UTC",
+      "location": "Main Boardroom",
+      "ownerId": "user_admin",
+      "attendeeIds": [
+        "user_admin",
+        "user_sales"
+      ],
+      "resourceIds": [],
+      "reminderIds": [],
+      "metadata": {}
+    },
+    {
+      "id": "sched_past",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_main",
+      "title": "Completed Meeting",
+      "description": "This meeting has been completed",
+      "type": "meeting",
+      "status": "completed",
+      "startTime": "2026-05-22T02:43:46.043Z",
+      "endTime": "2026-05-22T02:43:46.043Z",
+      "durationMinutes": 60,
+      "timezone": "UTC",
+      "ownerId": "user_sales",
+      "attendeeIds": [
+        "user_sales",
+        "user_support"
+      ],
+      "resourceIds": [],
+      "reminderIds": [],
+      "metadata": {}
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "AI Automation Demo",
+      "description": "Product demo for enterprise client",
+      "type": "demo",
+      "status": "confirmed",
+      "calendarId": "cal_consultations",
+      "startTime": "2026-05-24T02:43:46.043Z",
+      "endTime": "2026-05-24T02:43:46.043Z",
+      "durationMinutes": 60,
+      "timezone": "UTC",
+      "clientId": "client_abc",
+      "clientName": "ABC Technologies",
+      "clientEmail": "contact@abctech.com",
+      "hostId": "user_sales",
+      "hostName": "Sales Team",
+      "location": "Virtual",
+      "meetingLink": "https://meet.example.com/demo-abc",
+      "reminderIds": [],
+      "metadata": {
+        "source": "website",
+        "converted": true
+      }
+    },
+    {
+      "id": "appt_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Career Consultation",
+      "description": "Career guidance session",
+      "type": "consultation",
+      "status": "requested",
+      "startTime": "2026-05-30T02:43:46.043Z",
+      "endTime": "2026-05-30T02:43:46.043Z",
+      "durationMinutes": 60,
+      "timezone": "UTC",
+      "clientId": "client_john",
+      "clientName": "John Doe",
+      "clientEmail": "john@example.com",
+      "hostId": "user_trainer",
+      "hostName": "Career Coach",
+      "meetingLink": "https://meet.example.com/career-john",
+      "reminderIds": [],
+      "metadata": {}
+    },
+    {
+      "id": "appt_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Technical Interview",
+      "description": "Senior developer interview",
+      "type": "interview",
+      "status": "confirmed",
+      "startTime": "2026-05-30T02:43:46.043Z",
+      "endTime": "2026-05-30T02:43:46.043Z",
+      "durationMinutes": 120,
+      "timezone": "UTC",
+      "clientName": "Jane Smith",
+      "clientEmail": "jane@careers.com",
+      "hostId": "user_hr",
+      "hostName": "HR Team",
+      "reminderIds": [],
+      "metadata": {
+        "position": "Senior Developer",
+        "rounds": 2
+      }
+    }
+  ],
+  "bookings": [
+    {
+      "id": "book_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Premium Consultation",
+      "description": "1-hour premium consultation session",
+      "status": "confirmed",
+      "calendarId": "cal_consultations",
+      "startTime": "2026-05-24T02:43:46.043Z",
+      "endTime": "2026-05-24T02:43:46.043Z",
+      "durationMinutes": 60,
+      "timezone": "UTC",
+      "serviceType": "premium-consultation",
+      "customerId": "customer_xyz",
+      "customerName": "XYZ Corporation",
+      "customerEmail": "bookings@xyzcorp.com",
+      "hostId": "user_sales",
+      "hostName": "Senior Consultant",
+      "meetingLink": "https://meet.example.com/xyz-premium",
+      "resourceIds": [],
+      "quantity": 1,
+      "price": 299.99,
+      "currency": "USD",
+      "paymentStatus": "paid",
+      "reminderIds": [],
+      "metadata": {}
+    },
+    {
+      "id": "book_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Training Session",
+      "description": "Team training on new platform",
+      "status": "pending",
+      "startTime": "2026-05-30T02:43:46.043Z",
+      "endTime": "2026-05-30T02:43:46.043Z",
+      "durationMinutes": 180,
+      "timezone": "UTC",
+      "serviceType": "training",
+      "customerName": "Enterprise Client",
+      "customerEmail": "training@enterprise.com",
+      "hostId": "user_trainer",
+      "hostName": "Training Team",
+      "resourceIds": [
+        "room_training"
+      ],
+      "quantity": 5,
+      "price": 999.99,
+      "currency": "USD",
+      "paymentStatus": "pending",
+      "reminderIds": [],
+      "metadata": {
+        "batch": "Q2-2026",
+        "attendees": 25
+      }
+    },
+    {
+      "id": "book_completed",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Completed Booking",
+      "status": "completed",
+      "startTime": "2026-05-22T02:43:46.043Z",
+      "endTime": "2026-05-22T02:43:46.043Z",
+      "durationMinutes": 60,
+      "timezone": "UTC",
+      "serviceType": "consultation",
+      "customerName": "Previous Client",
+      "customerEmail": "client@past.com",
+      "hostId": "user_support",
+      "hostName": "Support Team",
+      "resourceIds": [],
+      "quantity": 1,
+      "paymentStatus": "paid",
+      "reminderIds": [],
+      "metadata": {}
+    }
+  ],
+  "timeSlots": [
+    {
+      "id": "slot_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_consultations",
+      "title": "Morning Consultation Slot",
+      "startTime": "2026-05-24T02:43:46.043Z",
+      "endTime": "2026-05-24T02:43:46.043Z",
+      "durationMinutes": 30,
+      "bufferMinutes": 5,
+      "capacity": 1,
+      "bookedCount": 0,
+      "status": "available",
+      "serviceType": "consultation",
+      "ownerId": "user_sales",
+      "hostId": "user_sales",
+      "requiresApproval": false,
+      "metadata": {}
+    },
+    {
+      "id": "slot_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_consultations",
+      "title": "Afternoon Demo Slot",
+      "startTime": "2026-05-24T02:43:46.043Z",
+      "endTime": "2026-05-24T02:43:46.043Z",
+      "durationMinutes": 60,
+      "bufferMinutes": 10,
+      "capacity": 3,
+      "bookedCount": 1,
+      "status": "limited",
+      "serviceType": "demo",
+      "ownerId": "user_sales",
+      "hostId": "user_sales",
+      "requiresApproval": false,
+      "metadata": {}
+    },
+    {
+      "id": "slot_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "calendarId": "cal_training",
+      "title": "Training Session Slot",
+      "startTime": "2026-05-30T02:43:46.043Z",
+      "endTime": "2026-05-30T02:43:46.043Z",
+      "durationMinutes": 180,
+      "bufferMinutes": 15,
+      "capacity": 20,
+      "bookedCount": 0,
+      "status": "available",
+      "serviceType": "training",
+      "ownerId": "user_trainer",
+      "hostId": "user_trainer",
+      "requiresApproval": true,
+      "metadata": {}
+    }
+  ],
+  "availabilityRules": [
+    {
+      "id": "avail_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Standard Working Hours",
+      "ownerId": "user_sales",
+      "targetType": "user",
+      "targetId": "user_sales",
+      "type": "working_hours",
+      "dayOfWeek": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "isAvailable": true,
+      "timezone": "UTC",
+      "recurring": true,
+      "status": "active",
+      "metadata": {}
+    },
+    {
+      "id": "avail_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Weekend Block",
+      "ownerId": "user_admin",
+      "targetType": "team",
+      "type": "blocked",
+      "dayOfWeek": [
+        0,
+        6
+      ],
+      "isAvailable": false,
+      "reason": "Weekends are non-working days",
+      "timezone": "UTC",
+      "recurring": true,
+      "status": "active",
+      "metadata": {}
+    },
+    {
+      "id": "avail_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Conference Room A Availability",
+      "targetType": "room",
+      "targetId": "room_conference_a",
+      "type": "working_hours",
+      "dayOfWeek": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "startTime": "08:00",
+      "endTime": "20:00",
+      "isAvailable": true,
+      "bufferMinutes": 15,
+      "capacity": 10,
+      "timezone": "UTC",
+      "recurring": true,
+      "status": "active",
+      "metadata": {}
+    }
+  ],
+  "reminders": [
+    {
+      "id": "rem_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "appointmentId": "appt_1",
+      "title": "AI Automation Demo Reminder",
+      "message": "Your demo with ABC Technologies starts in 1 hour",
+      "timing": "1hour",
+      "scheduledFor": "2026-05-24T02:43:46.043Z",
+      "status": "pending",
+      "recipientIds": [
+        "user_sales",
+        "client_abc"
+      ],
+      "channels": [
+        "email",
+        "in_app"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "rem_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "bookingId": "book_1",
+      "title": "Premium Consultation Reminder",
+      "message": "Your consultation session starts tomorrow",
+      "timing": "1day",
+      "scheduledFor": "2026-05-23T02:43:46.043Z",
+      "status": "sent",
+      "sentAt": "2026-05-23T02:43:46.042Z",
+      "recipientIds": [
+        "user_sales",
+        "customer_xyz"
+      ],
+      "channels": [
+        "email"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "rem_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "scheduleId": "sched_1",
+      "title": "Team Standup Reminder",
+      "message": "Weekly team standup starts in 15 minutes",
+      "timing": "15min",
+      "scheduledFor": "2026-05-24T02:43:46.043Z",
+      "status": "pending",
+      "recipientIds": [
+        "user_admin",
+        "user_sales",
+        "user_support"
+      ],
+      "channels": [
+        "in_app"
+      ],
+      "metadata": {}
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "dead_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Q2 Product Launch",
+      "description": "Launch new product features",
+      "status": "upcoming",
+      "dueDate": "2026-05-30T02:43:46.043Z",
+      "ownerId": "user_admin",
+      "priority": "high",
+      "category": "product",
+      "reminderIds": [],
+      "metadata": {}
+    },
+    {
+      "id": "dead_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "title": "Security Review",
+      "description": "Complete quarterly security audit",
+      "status": "upcoming",
+      "dueDate": "2026-06-06T02:43:46.043Z",
+      "ownerId": "user_security",
+      "priority": "critical",
+      "category": "security",
+      "reminderIds": [],
+      "metadata": {}
+    }
+  ],
+  "bookingPages": [
+    {
+      "id": "bpage_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Demo Booking Page",
+      "slug": "book-demo",
+      "description": "Book a product demo with our team",
+      "ownerId": "user_sales",
+      "calendarId": "cal_consultations",
+      "status": "active",
+      "services": [
+        {
+          "name": "Product Demo",
+          "durationMinutes": 45,
+          "description": "45-minute product demonstration"
+        },
+        {
+          "name": "Technical Demo",
+          "durationMinutes": 60,
+          "description": "60-minute technical deep dive",
+          "price": 99.99
+        },
+        {
+          "name": "Enterprise Demo",
+          "durationMinutes": 90,
+          "price": 299.99,
+          "description": "90-minute comprehensive demo"
+        }
+      ],
+      "availableDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "startHour": 9,
+      "endHour": 17,
+      "timezone": "UTC",
+      "bufferMinutes": 10,
+      "maxBookingsPerSlot": 2,
+      "requiresApproval": false,
+      "meetingLinkEnabled": true,
+      "metadata": {}
+    },
+    {
+      "id": "bpage_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Career Consultation Booking",
+      "slug": "career-consultation",
+      "description": "Book a career guidance session",
+      "ownerId": "user_trainer",
+      "status": "active",
+      "services": [
+        {
+          "name": "Initial Consultation",
+          "durationMinutes": 30,
+          "price": 0,
+          "description": "Free initial consultation"
+        },
+        {
+          "name": "Career Planning Session",
+          "durationMinutes": 60,
+          "price": 149.99,
+          "description": "In-depth career planning"
+        },
+        {
+          "name": "Resume Review",
+          "durationMinutes": 45,
+          "price": 79.99,
+          "description": "Professional resume review"
+        }
+      ],
+      "availableDays": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "startHour": 10,
+      "endHour": 19,
+      "timezone": "UTC",
+      "bufferMinutes": 5,
+      "maxBookingsPerSlot": 1,
+      "requiresApproval": true,
+      "meetingLinkEnabled": true,
+      "cancellationPolicy": "24 hours notice required for cancellation",
+      "metadata": {}
+    }
+  ],
+  "waitlistEntries": [
+    {
+      "id": "waitl_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "bookingPageId": "bpage_2",
+      "serviceType": "career-planning",
+      "customerName": "Waiting Customer",
+      "customerEmail": "waiting@example.com",
+      "preferredDates": [
+        "2026-05-24",
+        "2026-05-30"
+      ],
+      "preferredTimeSlots": [
+        "10:00",
+        "14:00",
+        "16:00"
+      ],
+      "status": "waiting",
+      "priority": "normal",
+      "metadata": {}
+    }
+  ],
+  "scheduleTemplates": [
+    {
+      "id": "stpl_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Standard Meeting",
+      "description": "Default template for internal meetings",
+      "type": "meeting",
+      "durationMinutes": 30,
+      "bufferMinutes": 5,
+      "ownerId": "user_admin",
+      "timezone": "UTC",
+      "defaultLocation": "Conference Room",
+      "defaultAttendeeIds": [],
+      "reminderTimings": [
+        "15min",
+        "1hour"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "stpl_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Client Consultation",
+      "description": "Template for client consultation sessions",
+      "type": "appointment",
+      "durationMinutes": 60,
+      "bufferMinutes": 10,
+      "ownerId": "user_sales",
+      "timezone": "UTC",
+      "defaultMeetingLink": "https://meet.example.com/consultation",
+      "defaultAttendeeIds": [],
+      "reminderTimings": [
+        "15min",
+        "1hour",
+        "1day"
+      ],
+      "metadata": {
+        "meetingLinkEnabled": true
+      }
+    },
+    {
+      "id": "stpl_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "name": "Training Session",
+      "description": "Template for training sessions",
+      "type": "class",
+      "durationMinutes": 180,
+      "bufferMinutes": 15,
+      "ownerId": "user_trainer",
+      "timezone": "UTC",
+      "defaultLocation": "Training Room",
+      "defaultAttendeeIds": [],
+      "reminderTimings": [
+        "1day",
+        "3days",
+        "1week"
+      ],
+      "metadata": {}
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "type": "booking.created",
+      "source": "SchedulingOS",
+      "data": {
+        "bookingId": "book_1",
+        "title": "Premium Consultation",
+        "customerName": "XYZ Corporation"
+      }
+    },
+    {
+      "id": "evt_2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "type": "appointment.scheduled",
+      "source": "SchedulingOS",
+      "data": {
+        "appointmentId": "appt_1",
+        "title": "AI Automation Demo",
+        "clientName": "ABC Technologies"
+      }
+    },
+    {
+      "id": "evt_3",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:43:46.042Z",
+      "updatedAt": "2026-05-23T02:43:46.042Z",
+      "type": "scheduling.seeded",
+      "source": "SchedulingOS",
+      "data": {
+        "message": "SchedulingOS demo data seeded"
+      }
+    }
+  ],
+  "auditLogs": []
+}

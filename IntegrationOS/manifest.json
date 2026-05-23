@@ -1,0 +1,84 @@
+{
+  "id": "integrationos",
+  "name": "IntegrationOS",
+  "package": "@appneurox/integrationos",
+  "version": "1.0.0",
+  "description": "External integrations, connectors, sync rules, webhooks, OAuth, and integration marketplace",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "IntegrationOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/integrations",
+    "standalonePath": "/integrationos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "integration.connector.create",
+    "integration.webhook.register",
+    "integration.sync.run",
+    "integration.oauth.connect"
+  ],
+  "workflows": [
+    "integration.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "integration.connector.created",
+      "integration.webhook.received",
+      "integration.sync.completed",
+      "integration.oauth.connected"
+    ],
+    "subscribes": [
+      "tenant.created",
+      "user.created"
+    ]
+  },
+  "permissions": [
+    "integration.read",
+    "integration.write",
+    "integration.connectors.manage",
+    "integration.webhooks.manage",
+    "integration.sync.manage",
+    "integration.oauth.manage",
+    "integration.marketplace.access"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "financeos",
+    "salesos",
+    "clientos",
+    "commerceos",
+    "careeros",
+    "learningos",
+    "automationos"
+  ],
+  "runtime": {
+    "port": 10400,
+    "localBaseUrl": "http://localhost:10400"
+  }
+}

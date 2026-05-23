@@ -1,0 +1,91 @@
+{
+  "id": "workflowos",
+  "name": "WorkflowOS",
+  "package": "@appneurox/workflowos",
+  "version": "1.0.0",
+  "description": "Workflow orchestration: triggers, actions, conditions, approvals, escalations, state management, execution, and monitoring",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "WorkflowOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/workflows",
+    "standalonePath": "/workflowos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "workflow.definition.create",
+    "workflow.execution.start",
+    "workflow.approval.request",
+    "workflow.escalation.trigger"
+  ],
+  "workflows": [
+    "workflow.orchestration.engine",
+    "workflow.state.manager",
+    "workflow.approval.pipeline"
+  ],
+  "events": {
+    "publishes": [
+      "workflow.definition.created",
+      "workflow.execution.started",
+      "workflow.execution.completed",
+      "workflow.execution.failed",
+      "workflow.approval.requested",
+      "workflow.approval.granted",
+      "workflow.approval.rejected",
+      "workflow.escalation.triggered",
+      "workflow.step.completed",
+      "workflow.step.failed",
+      "workflow.state.changed"
+    ],
+    "subscribes": [
+      "*.created",
+      "*.updated",
+      "*.completed",
+      "*.failed"
+    ]
+  },
+  "permissions": [
+    "workflow.definition.read",
+    "workflow.definition.write",
+    "workflow.execution.read",
+    "workflow.execution.write",
+    "workflow.approval.read",
+    "workflow.approval.write",
+    "workflow.escalation.write",
+    "workflow.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios",
+      "@appneurox/analyticsos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "analyticsos"
+  ],
+  "runtime": {
+    "port": 6000,
+    "localBaseUrl": "http://localhost:6000"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "sales-assistant",
+  "name": "Sales Assistant",
+  "description": "Helps users manage leads, deals, proposals, and follow-ups.",
+  "instructions": "Help users move sales work forward while respecting permissions and approval rules.",
+  "model": "default",
+  "tools": ["tool.email.send", "tool.pdf.generate"],
+  "commands": ["sales.lead.create", "sales.proposal.create", "sales.proposal.send"],
+  "permissions": ["sales.leads.create", "sales.proposals.create", "sales.proposals.send", "tools.email.send", "tools.pdf.generate"],
+  "memory": { "enabled": true, "scopes": ["run", "workspace", "tenant"] },
+  "guardrails": ["no_unapproved_discount", "no_false_revenue_claims"],
+  "humanApproval": { "requiredFor": ["sales.proposal.send", "tool.email.send"] },
+  "maxCostPerRun": 1,
+  "maxSteps": 10,
+  "status": "active"
+}

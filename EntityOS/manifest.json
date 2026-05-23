@@ -1,0 +1,79 @@
+{
+  "id": "entityos",
+  "name": "EntityOS",
+  "package": "@appneurox/entityos",
+  "version": "1.0.0",
+  "description": "Universal business object definitions, schemas, records, relationships, lifecycle, ownership, validation, search, audit, and metadata.",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "EntityOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/entity",
+    "standalonePath": "/entityos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "entity.create",
+    "entity.update",
+    "entity.run",
+    "entity.report"
+  ],
+  "workflows": [
+    "entity.default.workflow",
+    "entity.approval.workflow",
+    "entity.lifecycle.workflow"
+  ],
+  "agents": [
+    "entity.assistant",
+    "entity.reviewer",
+    "entity.automation-agent"
+  ],
+  "events": {
+    "publishes": [
+      "entity.created",
+      "entity.updated",
+      "entity.run.completed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "entity.read",
+    "entity.write",
+    "entity.run",
+    "entity.report",
+    "entity.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/dataos",
+      "@appneurox/searchos",
+      "@appneurox/auditos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "dataos",
+    "searchos",
+    "auditos"
+  ],
+  "runtime": {
+    "port": 10712,
+    "localBaseUrl": "http://localhost:10712"
+  }
+}

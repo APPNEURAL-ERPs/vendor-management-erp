@@ -1,0 +1,38 @@
+{
+  "name": "@appneurox/governanceos",
+  "version": "1.0.0",
+  "description": "GovernanceOS: Board governance, policies, board meetings, resolutions, and corporate governance",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/governanceos.db.json && npm run start"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "keywords": [
+    "appneurox",
+    "governanceos",
+    "governance",
+    "board",
+    "corporate",
+    "policy",
+    "resolution"
+  ],
+  "appneurox": {
+    "os": "governanceos",
+    "domain": "governance",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

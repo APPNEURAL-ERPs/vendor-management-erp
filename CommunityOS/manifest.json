@@ -1,0 +1,73 @@
+{
+  "id": "communityos",
+  "name": "CommunityOS",
+  "package": "@appneurox/communityos",
+  "version": "1.0.0",
+  "description": "Community building, forums, discussions, events, members, gamification, and member lifecycle",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "CommunityOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/community",
+    "standalonePath": "/communityos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "community.create",
+    "community.member.add",
+    "community.group.create",
+    "community.event.create",
+    "community.post.create",
+    "community.badge.award"
+  ],
+  "workflows": [
+    "community.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "community.created",
+      "community.member.joined",
+      "community.member.left",
+      "community.post.created",
+      "community.event.registered"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "community.read",
+    "community.write",
+    "community.members.manage",
+    "community.moderate",
+    "community.analytics.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios",
+      "@appneurox/eventos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "eventos"
+  ],
+  "runtime": {}
+}

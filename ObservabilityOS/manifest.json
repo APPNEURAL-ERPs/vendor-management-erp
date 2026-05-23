@@ -1,0 +1,80 @@
+{
+  "id": "observabilityos",
+  "name": "ObservabilityOS",
+  "package": "@appneurox/observabilityos",
+  "version": "1.0.0",
+  "description": "Logs, metrics, traces, alerts, service health, cost visibility, reliability dashboards, and debugging context",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ObservabilityOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/observability",
+    "standalonePath": "/observability",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "observability.health.check",
+    "observability.logs.query",
+    "observability.metrics.view",
+    "observability.traces.explore"
+  ],
+  "events": {
+    "publishes": [
+      "observability.alert.triggered",
+      "observability.health.degraded",
+      "observability.incident.created"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "observability.logs.read",
+    "observability.logs.write",
+    "observability.metrics.read",
+    "observability.traces.read",
+    "observability.alerts.read",
+    "observability.alerts.write",
+    "observability.health.read",
+    "observability.dashboard.read",
+    "observability.dashboard.write",
+    "observability.incident.read",
+    "observability.incident.write",
+    "observability.slo.read",
+    "observability.slo.write",
+    "observability.cost.read",
+    "observability.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/securityos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "workflowos",
+    "aios",
+    "agenticos",
+    "billingos",
+    "notificationos"
+  ],
+  "runtime": {
+    "port": 5700,
+    "localBaseUrl": "http://localhost:5700"
+  }
+}

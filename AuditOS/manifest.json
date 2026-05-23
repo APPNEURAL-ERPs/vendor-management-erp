@@ -1,0 +1,80 @@
+{
+  "id": "auditos",
+  "name": "AuditOS",
+  "package": "@appneurox/auditos",
+  "version": "1.0.0",
+  "description": "Immutable audit trails, evidence, compliance proof, activity tracking, change history, access review, and accountability layer",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "AuditOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/audit",
+    "standalonePath": "/auditos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "audit.event.create",
+    "audit.search.execute",
+    "audit.evidence.attach"
+  ],
+  "workflows": [
+    "audit.default.workflow"
+  ],
+  "agents": [
+    "audit.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "audit.event.created",
+      "audit.event.searched",
+      "audit.evidence.attached"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "audit.event.read",
+    "audit.event.write",
+    "audit.evidence.read",
+    "audit.evidence.write",
+    "audit.report.read",
+    "audit.report.write",
+    "audit.investigation.read",
+    "audit.investigation.write",
+    "audit.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/complianceos",
+      "@appneurox/governanceos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-sensitive-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "complianceos",
+    "governanceos",
+    "identityos"
+  ],
+  "runtime": {
+    "port": 5600,
+    "localBaseUrl": "http://localhost:5600"
+  }
+}

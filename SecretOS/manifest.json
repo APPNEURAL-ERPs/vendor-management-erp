@@ -1,0 +1,86 @@
+{
+  "id": "secretos",
+  "name": "SecretOS",
+  "package": "@appneurox/secretos",
+  "version": "1.0.0",
+  "description": "Secrets, credentials, tokens, encryption keys, rotation, and secure secret access",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "SecretOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/secrets",
+    "standalonePath": "/secretos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "secret.create",
+    "secret.rotate",
+    "secret.revoke",
+    "secret.access-request",
+    "secret.scan"
+  ],
+  "workflows": [
+    "secret.rotation.workflow"
+  ],
+  "agents": [
+    "secret.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "secret.created",
+      "secret.updated",
+      "secret.rotated",
+      "secret.revoked",
+      "secret.expired",
+      "secret.leak.detected"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "secret.read",
+    "secret.write",
+    "secret.reveal",
+    "secret.rotate",
+    "secret.revoke",
+    "secret.audit.read",
+    "secret.access.request",
+    "secret.policy.manage",
+    "secret.vault.manage"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/integrationos",
+      "@appneurox/ai-os",
+      "@appneurox/billingos"
+    ]
+  },
+  "dataClassification": "restricted",
+  "secretSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "integrationos",
+    "aios",
+    "billingos"
+  ],
+  "runtime": {
+    "port": 5400,
+    "localBaseUrl": "http://localhost:5400"
+  }
+}

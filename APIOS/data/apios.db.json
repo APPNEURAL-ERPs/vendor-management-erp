@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "api_mphqyjx6_vio3m38r",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.641Z",
+      "updatedAt": "2026-05-23T02:46:15.641Z",
+      "key": "api-registry",
+      "name": "API Registry",
+      "description": "Starter registry item for APIOS.",
+      "type": "API",
+      "status": "active",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "registry"
+      ],
+      "attributes": {
+        "purpose": "API design, contracts, endpoint generation, SDK generation, versioning, rate limiting, documentation, testing, monitoring, and API lifecycle management."
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "apios-tools.md"
+      }
+    },
+    {
+      "id": "api_mphqyjx6_1vr5yqr9",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.641Z",
+      "updatedAt": "2026-05-23T02:46:15.641Z",
+      "key": "api-lifecycle",
+      "name": "API Lifecycle",
+      "description": "Starter lifecycle item for APIOS operations.",
+      "type": "Endpoint",
+      "status": "pending_review",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "lifecycle"
+      ],
+      "attributes": {
+        "ownedEntities": [
+          "API",
+          "Endpoint",
+          "APIContract",
+          "APIVersion",
+          "APIConsumer",
+          "RateLimitPolicy",
+          "SDKPackage",
+          "APITest",
+          "APIMetric"
+        ]
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "apios-tools.md"
+      }
+    }
+  ],
+  "runs": [],
+  "events": [
+    {
+      "id": "event_mphqyjx6_gem21a3m",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.641Z",
+      "updatedAt": "2026-05-23T02:46:15.641Z",
+      "type": "api.seeded",
+      "source": "APIOS",
+      "itemId": "api_mphqyjx6_vio3m38r",
+      "payload": {
+        "items": 2
+      }
+    }
+  ],
+  "auditLogs": []
+}

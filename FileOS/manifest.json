@@ -1,0 +1,73 @@
+{
+  "id": "fileos",
+  "name": "FileOS",
+  "package": "@appneurox/fileos",
+  "version": "1.0.0",
+  "description": "File storage, upload, download, folder management, permissions, versioning, sharing, and S3/R2-backed object management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "FileOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/files",
+    "standalonePath": "/fileos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "file.upload",
+    "file.download",
+    "file.share",
+    "file.scan"
+  ],
+  "workflows": [
+    "file.upload.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "file.uploaded",
+      "file.downloaded",
+      "file.shared",
+      "file.deleted",
+      "file.scanned"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "file.read",
+    "file.write",
+    "file.delete",
+    "file.share",
+    "file.scan",
+    "file.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "documentos",
+    "searchos",
+    "auditos"
+  ],
+  "runtime": {
+    "port": 6200,
+    "localBaseUrl": "http://localhost:6200"
+  }
+}

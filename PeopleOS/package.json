@@ -1,0 +1,36 @@
+{
+  "name": "@appneurox/peopleos",
+  "version": "1.0.0",
+  "description": "PeopleOS: people operations engine for employees, hiring, onboarding, attendance, performance, engagement, and HR workflows.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/peopleos.db.json && npm run seed",
+    "test": "npm run build && echo 'No tests configured yet'"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "peopleos",
+    "hr",
+    "employee",
+    "hiring",
+    "onboarding",
+    "performance",
+    "operating-system"
+  ],
+  "appneurox": {
+    "os": "peopleos",
+    "domain": "people",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

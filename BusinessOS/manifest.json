@@ -1,0 +1,71 @@
+{
+  "id": "businessos",
+  "name": "BusinessOS",
+  "package": "@appneurox/businessos",
+  "version": "1.0.0",
+  "description": "Business planning, strategy, OKRs, initiatives, decisions, scorecards, and growth management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "BusinessOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/business",
+    "standalonePath": "/businessos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "business.model.create",
+    "business.plan.create",
+    "business.goal.create",
+    "business.decision.create"
+  ],
+  "workflows": [
+    "business.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "business.model.created",
+      "business.model.updated",
+      "business.goal.created",
+      "business.decision.made"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "business.read",
+    "business.write",
+    "business.strategy.manage",
+    "business.goals.manage",
+    "business.decisions.manage"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios"
+  ],
+  "runtime": {
+    "port": 8000,
+    "localBaseUrl": "http://localhost:8000"
+  }
+}

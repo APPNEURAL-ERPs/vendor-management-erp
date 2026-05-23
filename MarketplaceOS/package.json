@@ -1,0 +1,39 @@
+{
+  "name": "@appneurox/marketplaceos",
+  "version": "1.0.0",
+  "description": "MarketplaceOS: marketplace listings, sellers, buyers, checkout, licensing, reviews, and multi-vendor commerce",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/marketplaceos.db.json && npm run seed",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "marketplace",
+    "ecommerce",
+    "multi-vendor",
+    "operating-system",
+    "sdk"
+  ],
+  "appneurox": {
+    "os": "marketplaceos",
+    "domain": "marketplace",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

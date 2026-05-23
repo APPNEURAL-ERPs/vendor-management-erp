@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "entity_mphqyjzk_qaflv4wm",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.727Z",
+      "updatedAt": "2026-05-23T02:46:15.727Z",
+      "key": "entity-registry",
+      "name": "Entity Registry",
+      "description": "Starter registry item for EntityOS.",
+      "type": "EntityType",
+      "status": "active",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "registry"
+      ],
+      "attributes": {
+        "purpose": "Universal business object definitions, schemas, records, relationships, lifecycle, ownership, validation, search, audit, and metadata."
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "entityos-tools.md"
+      }
+    },
+    {
+      "id": "entity_mphqyjzk_cem9v69v",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.727Z",
+      "updatedAt": "2026-05-23T02:46:15.727Z",
+      "key": "entity-lifecycle",
+      "name": "Entity Lifecycle",
+      "description": "Starter lifecycle item for EntityOS operations.",
+      "type": "EntityRecord",
+      "status": "pending_review",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "lifecycle"
+      ],
+      "attributes": {
+        "ownedEntities": [
+          "EntityType",
+          "EntityRecord",
+          "EntitySchema",
+          "EntityField",
+          "EntityRelationship",
+          "EntityLifecycle",
+          "EntityValidation",
+          "EntityIndex"
+        ]
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "entityos-tools.md"
+      }
+    }
+  ],
+  "runs": [],
+  "events": [
+    {
+      "id": "event_mphqyjzk_ix8kgohz",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.727Z",
+      "updatedAt": "2026-05-23T02:46:15.727Z",
+      "type": "entity.seeded",
+      "source": "EntityOS",
+      "itemId": "entity_mphqyjzk_qaflv4wm",
+      "payload": {
+        "items": 2
+      }
+    }
+  ],
+  "auditLogs": []
+}

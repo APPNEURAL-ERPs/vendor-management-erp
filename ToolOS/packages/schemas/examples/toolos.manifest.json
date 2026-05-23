@@ -1,0 +1,79 @@
+{
+  "id": "tool.toolos.registry",
+  "name": "ToolOS Registry Tool",
+  "packageName": "@appneurox/toolos-registry-tool",
+  "version": "1.0.0",
+  "description": "Registers, lists, validates, and executes APPNEUROX tool manifests through ToolOS.",
+  "category": "platform",
+  "type": "deterministic",
+  "ai": {
+    "enabled": false,
+    "required": false,
+    "level": 0
+  },
+  "modes": ["standalone", "platform"],
+  "commands": [
+    {
+      "name": "tool.toolos.registry.validate",
+      "description": "Validate a tool manifest.",
+      "input": "manifest",
+      "output": "validation"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "tools.toolos.registry.validate",
+      "description": "Validate ToolOS manifests.",
+      "required": true
+    }
+  ],
+  "events": {
+    "publishes": ["tool.toolos.registry.validated"],
+    "subscribes": []
+  },
+  "api": {
+    "basePath": "/v1/tools/tool.toolos.registry"
+  },
+  "sdk": {
+    "namespace": "tools.toolos.registry"
+  },
+  "cli": {
+    "namespace": "toolos registry"
+  },
+  "inputs": [
+    {
+      "name": "manifest",
+      "type": "object",
+      "required": true,
+      "description": "Tool manifest payload to validate."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "valid",
+      "type": "boolean",
+      "description": "Whether the manifest is valid."
+    },
+    {
+      "name": "errors",
+      "type": "array",
+      "description": "Validation errors."
+    }
+  ],
+  "dependencies": {
+    "required": ["@appneurox/toolos"],
+    "optional": [],
+    "external": []
+  },
+  "usedBy": ["ToolOS", "DeveloperOS", "CommandOS"],
+  "safety": {
+    "requiresApproval": false,
+    "sensitiveData": false,
+    "allowedForAgents": true,
+    "rateLimit": {
+      "enabled": true,
+      "maxRequests": 120,
+      "windowSeconds": 60
+    }
+  }
+}

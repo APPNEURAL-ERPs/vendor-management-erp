@@ -1,0 +1,81 @@
+{
+  "id": "gatewayos",
+  "name": "GatewayOS",
+  "package": "@appneurox/gatewayos",
+  "version": "1.0.0",
+  "description": "Gateway routing, traffic control, request validation, authentication gateway, service gateway, tenant gateway, edge gateway, and policy enforcement.",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "GatewayOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/gateway",
+    "standalonePath": "/gatewayos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "gateway.create",
+    "gateway.update",
+    "gateway.run",
+    "gateway.report"
+  ],
+  "workflows": [
+    "gateway.default.workflow",
+    "gateway.approval.workflow",
+    "gateway.lifecycle.workflow"
+  ],
+  "agents": [
+    "gateway.assistant",
+    "gateway.reviewer",
+    "gateway.automation-agent"
+  ],
+  "events": {
+    "publishes": [
+      "gateway.created",
+      "gateway.updated",
+      "gateway.run.completed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "gateway.read",
+    "gateway.write",
+    "gateway.run",
+    "gateway.report",
+    "gateway.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/identityos",
+      "@appneurox/securityos",
+      "@appneurox/policyos",
+      "@appneurox/apios"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "identityos",
+    "securityos",
+    "policyos",
+    "apios"
+  ],
+  "runtime": {
+    "port": 10714,
+    "localBaseUrl": "http://localhost:10714"
+  }
+}

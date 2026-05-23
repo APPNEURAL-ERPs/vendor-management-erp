@@ -1,0 +1,98 @@
+{
+  "id": "documentos",
+  "name": "DocumentOS",
+  "package": "@appneurox/documentos",
+  "version": "1.0.0",
+  "description": "Document generation, templates, PDFs, proposals, contracts, invoices, certificates, reports, and document workflows",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "DocumentOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/documents",
+    "standalonePath": "/documentos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "document.create",
+    "document.render",
+    "document.approve",
+    "document.sign",
+    "document.export"
+  ],
+  "workflows": [
+    "document.default.workflow",
+    "document.approval.workflow",
+    "document.signature.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "document.created",
+      "document.updated",
+      "document.rendered",
+      "document.approved",
+      "document.signed",
+      "document.exported"
+    ],
+    "subscribes": [
+      "finance.invoice.created",
+      "sales.proposal.created",
+      "legal.contract.created",
+      "learning.certificate.created",
+      "career.resume.updated",
+      "policy.document.created"
+    ]
+  },
+  "permissions": [
+    "document.read",
+    "document.write",
+    "document.create",
+    "document.edit",
+    "document.approve",
+    "document.sign",
+    "document.download",
+    "document.share",
+    "document.delete",
+    "document.archive",
+    "document.template.read",
+    "document.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/templateos",
+      "@appneurox/notificationos",
+      "@appneurox/auditos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-sensitive-documents",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "templateos",
+    "financeos",
+    "salesos",
+    "legalos",
+    "learningos",
+    "careeros"
+  ],
+  "runtime": {
+    "port": 6400,
+    "localBaseUrl": "http://localhost:6400"
+  }
+}

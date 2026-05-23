@@ -1,0 +1,93 @@
+{
+  "id": "resourceos",
+  "name": "ResourceOS",
+  "package": "@appneurox/resourceos",
+  "version": "1.0.0",
+  "description": "Resource allocation, capacity planning, utilization tracking, and resource booking",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ResourceOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/resource",
+    "standalonePath": "/resourceos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "resource.create",
+    "resource.allocate",
+    "resource.book",
+    "resource.release",
+    "resource.search",
+    "resource.availability.check",
+    "resource.utilization.track"
+  ],
+  "workflows": [
+    "resource.allocation.workflow",
+    "resource.booking.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "resource.created",
+      "resource.allocated",
+      "resource.released",
+      "resource.booked",
+      "resource.conflict.detected",
+      "resource.capacity.low",
+      "resource.utilization.updated"
+    ],
+    "subscribes": [
+      "project.resource.requested",
+      "task.resource.needed",
+      "schedule.resource.required"
+    ]
+  },
+  "permissions": [
+    "resource.read",
+    "resource.write",
+    "resource.allocate",
+    "resource.book",
+    "resource.admin",
+    "resource.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "resourceTypes": [
+    "people",
+    "equipment",
+    "rooms",
+    "vehicles",
+    "licenses",
+    "cloud",
+    "digital",
+    "training",
+    "support",
+    "sales"
+  ],
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "projectos",
+    "taskos",
+    "schedulingos",
+    "financeos"
+  ],
+  "runtime": {}
+}

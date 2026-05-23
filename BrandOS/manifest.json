@@ -1,0 +1,71 @@
+{
+  "id": "brandos",
+  "name": "BrandOS",
+  "package": "@appneurox/brandos",
+  "version": "1.0.0",
+  "description": "BrandOS: brand identity, brand strategy, visual consistency, messaging, content style, and brand asset management layer",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "BrandOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/brand",
+    "standalonePath": "/brandos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "brand.kit.create",
+    "brand.guideline.generate",
+    "brand.asset.manage",
+    "brand.voice.check"
+  ],
+  "workflows": [
+    "brand.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "brand.kit.created",
+      "brand.guideline.generated",
+      "brand.asset.added",
+      "brand.voice.updated"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "brand.read",
+    "brand.write",
+    "brand.kit.manage",
+    "brand.guideline.manage",
+    "brand.asset.manage",
+    "brand.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/contentos",
+      "@appneurox/documentos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "contentos",
+    "documentos",
+    "websiteos",
+    "salesos"
+  ],
+  "runtime": {}
+}

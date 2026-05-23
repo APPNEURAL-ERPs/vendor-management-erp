@@ -1,0 +1,40 @@
+{
+  "name": "@appneurox/schedulingos",
+  "version": "1.0.0",
+  "description": "SchedulingOS: calendar, appointments, availability, bookings, reminders, and time-based coordination layer",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/schedulingos.db.json && npm run dev",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "keywords": [
+    "appneurox",
+    "schedulingos",
+    "scheduling",
+    "calendar",
+    "appointments",
+    "booking",
+    "operating-system"
+  ],
+  "appneurox": {
+    "os": "schedulingos",
+    "domain": "scheduling",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

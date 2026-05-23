@@ -1,0 +1,78 @@
+{
+  "id": "supportos",
+  "name": "SupportOS",
+  "package": "@appneurox/supportos",
+  "version": "1.0.0",
+  "description": "Customer support, helpdesk, ticketing, SLA, knowledge base, escalation, and support quality management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "SupportOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/support",
+    "standalonePath": "/supportos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "support.ticket.create",
+    "support.ticket.assign",
+    "support.escalation.create",
+    "support.sla.check"
+  ],
+  "workflows": [
+    "support.ticket.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "support.ticket.created",
+      "support.ticket.updated",
+      "support.escalation.created",
+      "support.sla.breached"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "support.ticket.read",
+    "support.ticket.write",
+    "support.escalation.manage",
+    "support.sla.manage",
+    "support.quality.review",
+    "support.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/clientos",
+      "@appneurox/knowledgeos",
+      "@appneurox/financeos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "clientos",
+    "knowledgeos",
+    "financeos",
+    "qualityos",
+    "platformos",
+    "securityos"
+  ],
+  "runtime": {
+    "port": 8900,
+    "localBaseUrl": "http://localhost:8900"
+  }
+}

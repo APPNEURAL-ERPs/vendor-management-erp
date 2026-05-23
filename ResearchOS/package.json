@@ -1,0 +1,51 @@
+{
+  "name": "@appneurox/researchos",
+  "version": "1.0.0",
+  "description": "ResearchOS: research questions, studies, sources, notes, hypotheses, evidence, insights, and synthesis for market, competitor, and user research",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "reset": "rm -f data/researchos.db.json"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@appneural/os-core": "file:../../APPNEURAL-Packages/os-core",
+    "@appneural/os-http": "file:../../APPNEURAL-Packages/os-http",
+    "@appneural/os-store": "file:../../APPNEURAL-Packages/os-store",
+    "@appneural/os-events": "file:../../APPNEURAL-Packages/os-events",
+    "@appneural/os-security": "file:../../APPNEURAL-Packages/os-security",
+    "@appneural/os-audit": "file:../../APPNEURAL-Packages/os-audit",
+    "@appneural/os-config": "file:../../APPNEURAL-Packages/os-config",
+    "@appneural/os-validation": "file:../../APPNEURAL-Packages/os-validation",
+    "@appneural/os-docs": "file:../../APPNEURAL-Packages/os-docs",
+    "@appneural/os-testing": "file:../../APPNEURAL-Packages/os-testing",
+    "@appneural/os-types": "file:../../APPNEURAL-Packages/os-types"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "keywords": [
+    "appneurox",
+    "researchos",
+    "operating-system",
+    "research",
+    "market-research",
+    "user-research",
+    "competitor-analysis"
+  ],
+  "appneurox": {
+    "os": "researchos",
+    "domain": "research",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

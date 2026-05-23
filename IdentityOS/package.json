@@ -1,0 +1,37 @@
+{
+  "name": "@appneurox/identityos",
+  "version": "1.0.0",
+  "description": "IdentityOS: reusable TypeScript operating layer for users, accounts, login, signup, sessions, MFA, SSO, roles, permissions, tenant identity, and identity governance",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/seed-state.js",
+    "reset": "rm -f data/identityos.db.json && npm run seed",
+    "test": "npm run build && node tests/identityos.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "identityos",
+    "identity",
+    "authentication",
+    "authorization",
+    "rbac",
+    "mfa",
+    "sso"
+  ],
+  "appneurox": {
+    "os": "identityos",
+    "domain": "identity",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

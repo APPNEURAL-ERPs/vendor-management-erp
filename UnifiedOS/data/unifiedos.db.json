@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "unified_mphqyk5n_kyn18oat",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.946Z",
+      "updatedAt": "2026-05-23T02:46:15.946Z",
+      "key": "unified-registry",
+      "name": "Unified Registry",
+      "description": "Starter registry item for UnifiedOS.",
+      "type": "OSModule",
+      "status": "active",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "registry"
+      ],
+      "attributes": {
+        "purpose": "Cross-OS orchestration that connects all AppNeuroX OS modules into one registry, dependency graph, workflow layer, event layer, and command center."
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "unifiedos-tools.md"
+      }
+    },
+    {
+      "id": "unified_mphqyk5n_oc3c0awj",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.946Z",
+      "updatedAt": "2026-05-23T02:46:15.946Z",
+      "key": "unified-lifecycle",
+      "name": "Unified Lifecycle",
+      "description": "Starter lifecycle item for UnifiedOS operations.",
+      "type": "OSDependency",
+      "status": "pending_review",
+      "ownerId": "system",
+      "tags": [
+        "starter",
+        "lifecycle"
+      ],
+      "attributes": {
+        "ownedEntities": [
+          "OSModule",
+          "OSDependency",
+          "CrossOSWorkflow",
+          "OSEventRoute",
+          "UnifiedCommand",
+          "HealthSignal",
+          "ImpactReport",
+          "IntegrationMap"
+        ]
+      },
+      "metadata": {
+        "source": "planning",
+        "toolsCatalog": "unifiedos-tools.md"
+      }
+    }
+  ],
+  "runs": [],
+  "events": [
+    {
+      "id": "event_mphqyk5n_bb2c3li1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-23T02:46:15.946Z",
+      "updatedAt": "2026-05-23T02:46:15.946Z",
+      "type": "unified.seeded",
+      "source": "UnifiedOS",
+      "itemId": "unified_mphqyk5n_kyn18oat",
+      "payload": {
+        "items": 2
+      }
+    }
+  ],
+  "auditLogs": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "developer-assistant",
+  "name": "Developer Assistant",
+  "description": "Helps generate APIs, SDKs, docs, and developer workflows.",
+  "instructions": "Help developers safely work with APPNEUROX APIs, SDKs, CLIs, and manifests.",
+  "model": "default",
+  "tools": ["tool.openapi.generate", "tool.docs.generate"],
+  "commands": ["developer.api.create", "developer.sdk.generate", "developer.docs.publish"],
+  "permissions": ["developer.apis.create", "developer.sdks.generate", "developer.docs.publish", "tools.openapi.generate", "tools.docs.generate"],
+  "memory": { "enabled": true, "scopes": ["run", "workspace", "tenant"] },
+  "guardrails": ["no_secret_exposure", "no_unapproved_api_key_creation"],
+  "humanApproval": { "requiredFor": ["developer.api_keys.create", "developer.docs.publish"] },
+  "maxCostPerRun": 1,
+  "maxSteps": 10,
+  "status": "active"
+}

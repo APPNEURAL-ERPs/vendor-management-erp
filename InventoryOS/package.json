@@ -1,0 +1,39 @@
+{
+  "name": "@appneurox/inventoryos",
+  "version": "1.0.0",
+  "description": "InventoryOS: operating layer for inventory management, stock levels, warehouses, transfers, and inventory lifecycle.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/inventoryos.db.json && npm run seed",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "keywords": [
+    "appneurox",
+    "inventoryos",
+    "inventory",
+    "stock",
+    "warehouse",
+    "operating-system"
+  ],
+  "appneurox": {
+    "os": "inventoryos",
+    "domain": "inventory",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

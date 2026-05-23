@@ -1,0 +1,621 @@
+{
+  "files": [
+    {
+      "id": "file_resume_ajay",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "ajay-resume.pdf",
+      "key": "fk_001_ajay-resume.pdf",
+      "folderId": "folder_resumes",
+      "mimeType": "application/pdf",
+      "size": 822000,
+      "extension": "pdf",
+      "status": "active",
+      "ownerId": "user_ajay",
+      "currentVersionId": "ver_resume_ajay_v1",
+      "storageProvider": "local",
+      "storagePath": "demo-tenant/documents/resumes/ajay-resume.pdf",
+      "tags": [
+        "resume",
+        "pdf",
+        "career",
+        "software-engineer"
+      ],
+      "metadata": {
+        "author": "Ajay Prajapat",
+        "role": "Software Engineer"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_ajay",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": false,
+      "isProtected": true,
+      "module": "CareerOS"
+    },
+    {
+      "id": "file_resume_rahul",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "rahul-sharma-resume.pdf",
+      "key": "fk_002_rahul-sharma-resume.pdf",
+      "folderId": "folder_resumes",
+      "mimeType": "application/pdf",
+      "size": 822000,
+      "extension": "pdf",
+      "status": "active",
+      "ownerId": "user_rahul",
+      "currentVersionId": "ver_resume_rahul_v1",
+      "storageProvider": "local",
+      "storagePath": "demo-tenant/documents/resumes/rahul-sharma-resume.pdf",
+      "tags": [
+        "resume",
+        "pdf",
+        "career",
+        "data-scientist"
+      ],
+      "metadata": {
+        "author": "Rahul Sharma",
+        "role": "Data Scientist"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_rahul",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": false,
+      "isProtected": false,
+      "module": "CareerOS"
+    },
+    {
+      "id": "file_invoice_q1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "invoice-q1-2024.pdf",
+      "key": "fk_003_invoice-q1-2024.pdf",
+      "folderId": "folder_invoices",
+      "mimeType": "application/pdf",
+      "size": 204000,
+      "extension": "pdf",
+      "status": "active",
+      "ownerId": "user_admin",
+      "storageProvider": "r2",
+      "storagePath": "demo-tenant/documents/invoices/invoice-q1-2024.pdf",
+      "tags": [
+        "invoice",
+        "q1",
+        "2024",
+        "finance"
+      ],
+      "metadata": {
+        "amount": 15000,
+        "currency": "INR",
+        "client": "ABC Corp"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_admin",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": false,
+      "isProtected": true,
+      "module": "FinanceOS"
+    },
+    {
+      "id": "file_logo",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "company-logo.png",
+      "key": "fk_004_company-logo.png",
+      "folderId": "folder_images",
+      "mimeType": "image/png",
+      "size": 1572864,
+      "extension": "png",
+      "status": "active",
+      "ownerId": "user_admin",
+      "storageProvider": "r2",
+      "storagePath": "demo-tenant/media/images/company-logo.png",
+      "tags": [
+        "logo",
+        "brand",
+        "png",
+        "company"
+      ],
+      "metadata": {
+        "width": 1024,
+        "height": 768,
+        "colorSpace": "RGB"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_admin",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": true,
+      "isProtected": false,
+      "module": "TemplateOS"
+    },
+    {
+      "id": "file_banner",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "hero-banner.webp",
+      "key": "fk_005_hero-banner.webp",
+      "folderId": "folder_images",
+      "mimeType": "image/webp",
+      "size": 1572864,
+      "extension": "webp",
+      "status": "active",
+      "ownerId": "user_admin",
+      "storageProvider": "r2",
+      "storagePath": "demo-tenant/media/images/hero-banner.webp",
+      "tags": [
+        "banner",
+        "hero",
+        "webp",
+        "marketing"
+      ],
+      "metadata": {
+        "width": 1920,
+        "height": 1080,
+        "optimized": true
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_admin",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": true,
+      "isProtected": false,
+      "module": "WebsiteOS"
+    },
+    {
+      "id": "file_demo_video",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "product-demo.mp4",
+      "key": "fk_006_product-demo.mp4",
+      "folderId": "folder_videos",
+      "mimeType": "video/mp4",
+      "size": 2097152,
+      "extension": "mp4",
+      "status": "active",
+      "ownerId": "user_admin",
+      "storageProvider": "r2",
+      "storagePath": "demo-tenant/media/videos/product-demo.mp4",
+      "tags": [
+        "video",
+        "demo",
+        "product",
+        "mp4",
+        "marketing"
+      ],
+      "metadata": {
+        "duration": 120,
+        "format": "mp4",
+        "resolution": "1080p"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_admin",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": true,
+      "isProtected": false,
+      "module": "LearningOS"
+    },
+    {
+      "id": "file_proposal",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "client-proposal.docx",
+      "key": "fk_007_client-proposal.docx",
+      "folderId": "folder_projects",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": 512000,
+      "extension": "docx",
+      "status": "active",
+      "ownerId": "user_admin",
+      "currentVersionId": "ver_proposal_v1",
+      "storageProvider": "local",
+      "storagePath": "demo-tenant/projects/client-proposal.docx",
+      "tags": [
+        "proposal",
+        "docx",
+        "client",
+        "business"
+      ],
+      "metadata": {
+        "client": "XYZ Inc",
+        "deadline": "2024-03-31"
+      },
+      "scanStatus": "clean",
+      "uploadedBy": "user_admin",
+      "uploadedAt": "2026-05-22T16:29:42.998Z",
+      "lastModifiedAt": "2026-05-22T16:29:42.998Z",
+      "isPublic": false,
+      "isProtected": true,
+      "module": "SalesOS"
+    }
+  ],
+  "folders": [
+    {
+      "id": "folder_root",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Root",
+      "key": "root",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root",
+      "fileCount": 0,
+      "folderCount": 6,
+      "totalSize": 0,
+      "isPublic": false
+    },
+    {
+      "id": "folder_documents",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Documents",
+      "key": "documents",
+      "parentId": "folder_root",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/documents",
+      "fileCount": 2,
+      "folderCount": 4,
+      "totalSize": 1848000,
+      "isPublic": false
+    },
+    {
+      "id": "folder_resumes",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Resumes",
+      "key": "resumes",
+      "parentId": "folder_documents",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/documents/resumes",
+      "fileCount": 2,
+      "folderCount": 0,
+      "totalSize": 1644000,
+      "isPublic": false
+    },
+    {
+      "id": "folder_invoices",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Invoices",
+      "key": "invoices",
+      "parentId": "folder_documents",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/documents/invoices",
+      "fileCount": 1,
+      "folderCount": 0,
+      "totalSize": 204000,
+      "isPublic": false
+    },
+    {
+      "id": "folder_media",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Media",
+      "key": "media",
+      "parentId": "folder_root",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/media",
+      "fileCount": 3,
+      "folderCount": 4,
+      "totalSize": 5242880,
+      "isPublic": true
+    },
+    {
+      "id": "folder_images",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Images",
+      "key": "images",
+      "parentId": "folder_media",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/media/images",
+      "fileCount": 2,
+      "folderCount": 0,
+      "totalSize": 3145728,
+      "isPublic": true
+    },
+    {
+      "id": "folder_videos",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Videos",
+      "key": "videos",
+      "parentId": "folder_media",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/media/videos",
+      "fileCount": 1,
+      "folderCount": 0,
+      "totalSize": 2097152,
+      "isPublic": true
+    },
+    {
+      "id": "folder_projects",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Projects",
+      "key": "projects",
+      "parentId": "folder_root",
+      "ownerId": "user_admin",
+      "status": "active",
+      "permissions": [],
+      "path": "/root/projects",
+      "fileCount": 1,
+      "folderCount": 1,
+      "totalSize": 512000,
+      "isPublic": false
+    }
+  ],
+  "versions": [
+    {
+      "id": "ver_resume_ajay_v1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_resume_ajay",
+      "versionNumber": 1,
+      "status": "current",
+      "size": 822000,
+      "storagePath": "demo-tenant/documents/resumes/ajay-resume.pdf/versions/v1",
+      "storageProvider": "local",
+      "createdBy": "user_ajay",
+      "isLocked": false
+    },
+    {
+      "id": "ver_resume_rahul_v1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_resume_rahul",
+      "versionNumber": 1,
+      "status": "current",
+      "size": 822000,
+      "storagePath": "demo-tenant/documents/resumes/rahul-sharma-resume.pdf/versions/v1",
+      "storageProvider": "local",
+      "createdBy": "user_rahul",
+      "isLocked": false
+    },
+    {
+      "id": "ver_proposal_v1",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_proposal",
+      "versionNumber": 1,
+      "status": "current",
+      "size": 512000,
+      "storagePath": "demo-tenant/projects/client-proposal.docx/versions/v1",
+      "storageProvider": "local",
+      "notes": "Initial proposal draft",
+      "createdBy": "user_admin",
+      "isLocked": false
+    }
+  ],
+  "metadata": [],
+  "uploads": [],
+  "downloads": [],
+  "permissions": [
+    {
+      "id": "perm_resume_ajay_viewers",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_resume_ajay",
+      "subjectType": "role",
+      "subjectId": "role_hr_manager",
+      "permissions": [
+        "file.view",
+        "file.preview",
+        "file.download"
+      ],
+      "grantedBy": "user_admin",
+      "isInherited": false
+    },
+    {
+      "id": "perm_invoice_finance",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_invoice_q1",
+      "subjectType": "role",
+      "subjectId": "role_finance",
+      "permissions": [
+        "file.view",
+        "file.preview",
+        "file.download",
+        "file.share"
+      ],
+      "grantedBy": "user_admin",
+      "isInherited": false
+    }
+  ],
+  "shareLinks": [
+    {
+      "id": "share_logo_public",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_logo",
+      "token": "tok_demo_logo_share",
+      "url": "/fileos/share/tok_demo_logo_share",
+      "status": "active",
+      "createdBy": "user_admin",
+      "permissions": [
+        "file.preview",
+        "file.download"
+      ],
+      "expiresAt": "2026-06-21T16:29:42.999Z",
+      "downloadCount": 0,
+      "requireLogin": false,
+      "allowPreview": true,
+      "allowDownload": true,
+      "watermarkEnabled": false
+    },
+    {
+      "id": "share_video_demo",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "fileId": "file_demo_video",
+      "token": "tok_demo_video_share",
+      "url": "/fileos/share/tok_demo_video_share",
+      "status": "active",
+      "createdBy": "user_admin",
+      "permissions": [
+        "file.preview"
+      ],
+      "expiresAt": "2026-05-29T16:29:42.999Z",
+      "maxDownloads": 10,
+      "downloadCount": 3,
+      "requireLogin": false,
+      "allowPreview": true,
+      "allowDownload": false,
+      "watermarkEnabled": true
+    }
+  ],
+  "previews": [],
+  "buckets": [
+    {
+      "id": "bucket_local",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Local Storage",
+      "key": "local_default",
+      "provider": "local",
+      "bucketName": "fileos-local",
+      "status": "active",
+      "totalSize": 2156000,
+      "fileCount": 3,
+      "isDefault": true,
+      "config": {
+        "path": "./storage"
+      }
+    },
+    {
+      "id": "bucket_r2",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Cloudflare R2",
+      "key": "r2_primary",
+      "provider": "r2",
+      "region": "auto",
+      "bucketName": "appneurox-files",
+      "status": "active",
+      "totalSize": 5446880,
+      "fileCount": 4,
+      "isDefault": false,
+      "config": {
+        "publicUrl": "https://files.appneurox.com"
+      }
+    }
+  ],
+  "scanResults": [],
+  "processingJobs": [],
+  "retentionRules": [
+    {
+      "id": "rule_invoice_7yr",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Invoice Retention - 7 Years",
+      "key": "invoice_retention_7yr",
+      "filePattern": "invoice-*.pdf",
+      "retentionDays": 2555,
+      "archiveAfterDays": 1825,
+      "deleteAfterDays": 2555,
+      "status": "active",
+      "createdBy": "user_admin"
+    },
+    {
+      "id": "rule_temp_7day",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Temporary Files - 7 Days",
+      "key": "temp_files_7day",
+      "filePattern": "temp-*.pdf",
+      "retentionDays": 7,
+      "deleteAfterDays": 7,
+      "status": "active",
+      "createdBy": "user_admin"
+    },
+    {
+      "id": "rule_resumes_permanent",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "name": "Resume Retention - Permanent",
+      "key": "resume_retention_permanent",
+      "folderId": "folder_resumes",
+      "retentionDays": -1,
+      "status": "active",
+      "createdBy": "user_admin"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_seeded",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "actorId": "user_admin",
+      "role": "owner",
+      "action": "system.init",
+      "entityType": "system",
+      "metadata": {
+        "message": "FileOS initialized with demo data"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_fileos_bootstrap",
+      "tenantId": "demo-tenant",
+      "createdAt": "2026-05-22T16:29:42.998Z",
+      "updatedAt": "2026-05-22T16:29:42.998Z",
+      "type": "fileos.seeded",
+      "source": "FileOS",
+      "actorId": "user_admin",
+      "data": {
+        "message": "FileOS demo data seeded",
+        "files": 7,
+        "folders": 8,
+        "buckets": 2
+      }
+    }
+  ],
+  "analytics": []
+}

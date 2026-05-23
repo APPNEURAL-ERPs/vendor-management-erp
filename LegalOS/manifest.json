@@ -1,0 +1,76 @@
+{
+  "id": "legalos",
+  "name": "LegalOS",
+  "package": "@appneurox/legalos",
+  "version": "1.0.0",
+  "description": "Legal cases, IP, privacy, terms, litigation, counsel, and legal operations",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "LegalOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/legal",
+    "standalonePath": "/legalos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "legal.case.create",
+    "legal.document.generate",
+    "legal.contract.create",
+    "legal.nda.generate"
+  ],
+  "workflows": [
+    "legal.contract.approval",
+    "legal.document.review"
+  ],
+  "events": {
+    "publishes": [
+      "legal.case.created",
+      "legal.case.updated",
+      "legal.document.generated",
+      "legal.contract.signed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "legal.case.read",
+    "legal.case.write",
+    "legal.document.read",
+    "legal.document.write",
+    "legal.contract.read",
+    "legal.contract.write",
+    "legal.nda.read",
+    "legal.nda.write",
+    "legal.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "confidential",
+  "legalComplianceLevel": "confidential-documents",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "governanceos"
+  ],
+  "runtime": {
+    "port": 9600,
+    "localBaseUrl": "http://localhost:9600"
+  }
+}

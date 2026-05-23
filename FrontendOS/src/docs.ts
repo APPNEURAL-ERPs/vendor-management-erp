@@ -1,0 +1,3 @@
+export function docs() {
+  return { name: "FrontendOS", package: "@appneurox/frontendos", purpose: "Frontend architecture, app shells, design systems, components, pages, layouts, routing, state, forms, accessibility, performance, and app experience.", owns: ["FrontendApp","AppShell","Page","Route","Component","Layout","Theme","Form","AccessibilityCheck"], routes: ["GET /health", "GET /docs", "GET /frontendos/overview", "GET /frontendos/items", "POST /frontendos/items", "GET /frontendos/items/:id", "PATCH /frontendos/items/:id", "DELETE /frontendos/items/:id", "GET /frontendos/runs", "POST /frontendos/runs", "GET /frontendos/events", "GET /frontendos/audit"] };
+}

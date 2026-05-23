@@ -1,0 +1,507 @@
+import { VendorState } from "./core/domain";
+import { emptyState } from "./core/datastore";
+import { nowIso, plusDays } from "./core/id";
+
+export function createSeedState(tenantId = "demo-tenant"): VendorState {
+  const state = emptyState();
+  const createdAt = nowIso();
+
+  state.categories.push(
+    {
+      id: "cat_cloud",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "cloud_vendors",
+      name: "Cloud Vendors",
+      description: "Cloud infrastructure and service providers",
+      vendorCount: 2,
+      isActive: true
+    },
+    {
+      id: "cat_software",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "software_vendors",
+      name: "Software Vendors",
+      description: "SaaS and software providers",
+      vendorCount: 2,
+      isActive: true
+    },
+    {
+      id: "cat_services",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "service_vendors",
+      name: "Service Vendors",
+      description: "Consulting and service providers",
+      vendorCount: 1,
+      isActive: true
+    },
+    {
+      id: "cat_marketing",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "marketing_vendors",
+      name: "Marketing Vendors",
+      description: "Marketing and advertising partners",
+      vendorCount: 1,
+      isActive: true
+    }
+  );
+
+  state.vendors.push(
+    {
+      id: "vendor_cloudflare",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "cloudflare",
+      name: "Cloudflare",
+      legalName: "Cloudflare Inc.",
+      type: "cloud_provider",
+      categoryId: "cat_cloud",
+      status: "active",
+      riskLevel: "low",
+      contacts: [
+        { name: "John Smith", email: "enterprise@cloudflare.com", designation: "Account Executive", isPrimary: true }
+      ],
+      addresses: [
+        { type: "billing", line1: "101 Townsend St", city: "San Francisco", state: "CA", postalCode: "94107", country: "USA" }
+      ],
+      services: ["CDN", "DDoS Protection", "DNS", "SSL Certificates", "Edge Computing"],
+      description: "Global cloud services provider with edge network",
+      website: "https://cloudflare.com",
+      owner: "Infrastructure Team",
+      tier: "tier2_preferred",
+      tags: ["cdn", "security", "performance"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 48000,
+      performanceScore: 92,
+      lastPerformanceReview: createdAt
+    },
+    {
+      id: "vendor_aws",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "aws",
+      name: "Amazon Web Services",
+      legalName: "Amazon Web Services Inc.",
+      type: "cloud_provider",
+      categoryId: "cat_cloud",
+      status: "active",
+      riskLevel: "medium",
+      contacts: [
+        { name: "Sarah Johnson", email: "aws-enterprise@amazon.com", designation: "TAM", isPrimary: true }
+      ],
+      addresses: [
+        { type: "billing", line1: "410 Terry Avenue N", city: "Seattle", state: "WA", postalCode: "98109", country: "USA" }
+      ],
+      services: ["Compute", "Storage", "Database", "AI/ML", "Analytics"],
+      description: "Comprehensive cloud computing platform",
+      website: "https://aws.amazon.com",
+      owner: "Platform Team",
+      tier: "tier1_strategic",
+      tags: ["iaas", "cloud", "strategic"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 125000,
+      performanceScore: 88,
+      lastPerformanceReview: createdAt
+    },
+    {
+      id: "vendor_figma",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "figma",
+      name: "Figma",
+      legalName: "Figma, Inc.",
+      type: "saas_provider",
+      categoryId: "cat_software",
+      status: "active",
+      riskLevel: "low",
+      contacts: [
+        { name: "Design Team", email: "design@figma.com", isPrimary: true }
+      ],
+      addresses: [],
+      services: ["UI/UX Design", "Prototyping", "Design Systems"],
+      description: "Collaborative design platform",
+      website: "https://figma.com",
+      owner: "Design Team",
+      tier: "tier2_preferred",
+      tags: ["design", "collaboration", "saas"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 12000,
+      performanceScore: 95,
+      lastPerformanceReview: createdAt
+    },
+    {
+      id: "vendor_github",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "github",
+      name: "GitHub",
+      legalName: "GitHub, Inc.",
+      type: "saas_provider",
+      categoryId: "cat_software",
+      status: "active",
+      riskLevel: "low",
+      contacts: [
+        { name: "DevRel Team", email: "enterprise@github.com", isPrimary: true }
+      ],
+      addresses: [],
+      services: ["Code Hosting", "CI/CD", "Project Management"],
+      description: "Code hosting and collaboration platform",
+      website: "https://github.com",
+      owner: "Engineering Team",
+      tier: "tier1_strategic",
+      tags: ["devtools", "collaboration"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 21000,
+      performanceScore: 90,
+      lastPerformanceReview: createdAt
+    },
+    {
+      id: "vendor_acme_consulting",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "acme_consulting",
+      name: "Acme Consulting",
+      legalName: "Acme Consulting Services Pvt Ltd",
+      type: "consultant",
+      categoryId: "cat_services",
+      status: "under_review",
+      riskLevel: "medium",
+      contacts: [
+        { name: "Rajesh Kumar", email: "rajesh@acmeconsulting.com", phone: "+91-9876543210", designation: "Partner", isPrimary: true }
+      ],
+      addresses: [
+        { type: "registered", line1: "123 Business Park", line2: "Sector 62", city: "Noida", state: "UP", postalCode: "201301", country: "India" }
+      ],
+      taxDetail: { taxId: "09AAACA1234C1Z5", taxIdType: "gstin", isVerified: false },
+      services: ["Strategy Consulting", "Digital Transformation", "Process Optimization"],
+      description: "Management consulting firm specializing in digital transformation",
+      owner: "Operations Team",
+      tags: ["consulting", "strategy"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 0
+    },
+    {
+      id: "vendor_creative_agency",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      key: "creative_agency",
+      name: "Pixel Perfect Agency",
+      legalName: "Pixel Perfect Creative Solutions",
+      type: "agency",
+      categoryId: "cat_marketing",
+      status: "active",
+      riskLevel: "low",
+      contacts: [
+        { name: "Priya Sharma", email: "priya@pixelperfect.agency", phone: "+91-9988776655", designation: "Creative Director", isPrimary: true }
+      ],
+      addresses: [
+        { type: "registered", line1: "456 Design Street", city: "Mumbai", state: "MH", postalCode: "400001", country: "India" }
+      ],
+      services: ["Brand Design", "Marketing Collateral", "Social Media Graphics"],
+      description: "Creative design agency for marketing materials",
+      owner: "Marketing Team",
+      tier: "tier3_approved",
+      tags: ["design", "marketing"],
+      metadata: {},
+      createdBy: "seed",
+      totalSpend: 35000,
+      performanceScore: 85,
+      lastPerformanceReview: createdAt
+    }
+  );
+
+  state.contracts.push(
+    {
+      id: "contract_cloudflare_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_cloudflare",
+      key: "cloudflare_enterprise_2025",
+      name: "Cloudflare Enterprise Agreement",
+      type: "vendor_agreement",
+      status: "active",
+      startDate: "2025-01-01T00:00:00.000Z",
+      endDate: "2025-12-31T00:00:00.000Z",
+      value: 48000,
+      currency: "USD",
+      paymentTerms: "Net 30",
+      documents: [],
+      autoRenew: true,
+      noticePeriodDays: 30,
+      metadata: {}
+    },
+    {
+      id: "contract_aws_enterprise",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_aws",
+      key: "aws_enterprise_2025",
+      name: "AWS Enterprise Agreement",
+      type: "vendor_agreement",
+      status: "active",
+      startDate: "2025-01-01T00:00:00.000Z",
+      endDate: "2025-12-31T00:00:00.000Z",
+      value: 150000,
+      currency: "USD",
+      paymentTerms: "Net 45",
+      documents: [],
+      autoRenew: true,
+      noticePeriodDays: 60,
+      metadata: {}
+    },
+    {
+      id: "contract_figma_team",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_figma",
+      key: "figma_team_2025",
+      name: "Figma Team Subscription",
+      type: "license",
+      status: "active",
+      startDate: "2025-01-01T00:00:00.000Z",
+      endDate: "2025-12-31T00:00:00.000Z",
+      value: 12000,
+      currency: "USD",
+      paymentTerms: "Annual",
+      documents: [],
+      autoRenew: true,
+      noticePeriodDays: 30,
+      metadata: {}
+    }
+  );
+
+  state.documents.push(
+    {
+      id: "doc_cloudflare_nda",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_cloudflare",
+      key: "cloudflare_nda",
+      name: "Mutual NDA",
+      type: "nda",
+      status: "verified",
+      expiryDate: plusDays(365),
+      verifiedAt: createdAt,
+      verifiedBy: "seed",
+      metadata: {}
+    },
+    {
+      id: "doc_aws_msa",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_aws",
+      key: "aws_msa",
+      name: "Master Service Agreement",
+      type: "vendor_agreement",
+      status: "verified",
+      expiryDate: plusDays(730),
+      verifiedAt: createdAt,
+      verifiedBy: "seed",
+      metadata: {}
+    },
+    {
+      id: "doc_acme_gst",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_acme_consulting",
+      key: "acme_gst_certificate",
+      name: "GST Registration Certificate",
+      type: "gst_certificate",
+      status: "submitted",
+      metadata: {}
+    }
+  );
+
+  state.performanceRecords.push(
+    {
+      id: "perf_cloudflare_q1_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_cloudflare",
+      period: "2025-Q1",
+      deliveryScore: 98,
+      qualityScore: 95,
+      costScore: 80,
+      supportScore: 94,
+      overallScore: 92,
+      onTimeDeliveryRate: 100,
+      qualityIssueRate: 0,
+      slaComplianceRate: 99.9,
+      invoiceAccuracyRate: 100,
+      responseTimeHours: 2,
+      reviewDate: createdAt,
+      reviewedBy: "seed",
+      metadata: {}
+    },
+    {
+      id: "perf_aws_q1_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_aws",
+      period: "2025-Q1",
+      deliveryScore: 90,
+      qualityScore: 92,
+      costScore: 75,
+      supportScore: 88,
+      overallScore: 86,
+      onTimeDeliveryRate: 95,
+      qualityIssueRate: 2,
+      slaComplianceRate: 99.5,
+      invoiceAccuracyRate: 98,
+      responseTimeHours: 4,
+      reviewDate: createdAt,
+      reviewedBy: "seed",
+      metadata: {}
+    }
+  );
+
+  state.subscriptions.push(
+    {
+      id: "sub_figma_team",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_figma",
+      name: "Figma Organization Plan",
+      plan: "Organization",
+      status: "active",
+      startDate: "2025-01-01T00:00:00.000Z",
+      billingCycle: "yearly",
+      amount: 12000,
+      currency: "USD",
+      autoRenew: true,
+      nextBillingDate: "2026-01-01T00:00:00.000Z",
+      metadata: { seats: 25 }
+    },
+    {
+      id: "sub_github_enterprise",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_github",
+      name: "GitHub Enterprise",
+      plan: "Enterprise Cloud",
+      status: "active",
+      startDate: "2025-01-01T00:00:00.000Z",
+      billingCycle: "yearly",
+      amount: 21000,
+      currency: "USD",
+      autoRenew: true,
+      nextBillingDate: "2026-01-01T00:00:00.000Z",
+      metadata: { seats: 50 }
+    }
+  );
+
+  state.invoices.push(
+    {
+      id: "inv_cloudflare_may_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_cloudflare",
+      invoiceNumber: "INV-2025-05-001",
+      amount: 4000,
+      currency: "USD",
+      taxAmount: 0,
+      totalAmount: 4000,
+      status: "paid",
+      issueDate: "2025-05-01T00:00:00.000Z",
+      dueDate: "2025-05-31T00:00:00.000Z",
+      paidDate: "2025-05-15T00:00:00.000Z",
+      lineItems: [{ description: "Cloudflare Enterprise - May 2025", quantity: 1, unitPrice: 4000, total: 4000 }],
+      metadata: {}
+    },
+    {
+      id: "inv_aws_apr_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_aws",
+      invoiceNumber: "AWS-INV-2025-04",
+      amount: 12450.75,
+      currency: "USD",
+      taxAmount: 0,
+      totalAmount: 12450.75,
+      status: "paid",
+      issueDate: "2025-04-30T00:00:00.000Z",
+      dueDate: "2025-06-14T00:00:00.000Z",
+      paidDate: "2025-05-20T00:00:00.000Z",
+      lineItems: [
+        { description: "EC2 Instances", quantity: 1, unitPrice: 8500, total: 8500 },
+        { description: "S3 Storage", quantity: 1, unitPrice: 2500, total: 2500 },
+        { description: "CloudWatch", quantity: 1, unitPrice: 450.75, total: 450.75 },
+        { description: "Data Transfer", quantity: 1, unitPrice: 1000, total: 1000 }
+      ],
+      metadata: {}
+    }
+  );
+
+  state.payments.push(
+    {
+      id: "pay_cloudflare_may_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_cloudflare",
+      invoiceId: "inv_cloudflare_may_2025",
+      amount: 4000,
+      currency: "USD",
+      status: "paid",
+      paymentDate: "2025-05-15T00:00:00.000Z",
+      referenceNumber: "PAY-2025-05-001",
+      metadata: {}
+    },
+    {
+      id: "pay_aws_apr_2025",
+      tenantId,
+      createdAt,
+      updatedAt: createdAt,
+      vendorId: "vendor_aws",
+      invoiceId: "inv_aws_apr_2025",
+      amount: 12450.75,
+      currency: "USD",
+      status: "paid",
+      paymentDate: "2025-05-20T00:00:00.000Z",
+      referenceNumber: "PAY-2025-05-002",
+      metadata: {}
+    }
+  );
+
+  state.events.push({
+    id: "evt_seed_bootstrap",
+    tenantId,
+    createdAt,
+    updatedAt: createdAt,
+    type: "vendoros.seeded",
+    source: "VendorOS",
+    data: { message: "VendorOS demo data seeded" }
+  });
+
+  return state;
+}

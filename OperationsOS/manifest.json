@@ -1,0 +1,109 @@
+{
+  "id": "operationsos",
+  "name": "OperationsOS",
+  "package": "@appneurox/operationsos",
+  "version": "1.0.0",
+  "description": "Operating cadence, processes, tasks, resources, incidents, SOPs, and cross-team execution",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "OperationsOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/operations",
+    "standalonePath": "/operations",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "ops.task.create",
+    "ops.task.update",
+    "ops.process.start",
+    "ops.checklist.run",
+    "ops.issue.create",
+    "ops.incident.create",
+    "ops.sla.check",
+    "ops.daily.report"
+  ],
+  "workflows": [
+    "ops.default.workflow",
+    "ops.client.onboarding.workflow",
+    "ops.project.delivery.workflow",
+    "ops.incident.response.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "ops.task.created",
+      "ops.task.updated",
+      "ops.task.completed",
+      "ops.task.delayed",
+      "ops.process.started",
+      "ops.process.completed",
+      "ops.issue.created",
+      "ops.issue.resolved",
+      "ops.incident.created",
+      "ops.incident.resolved",
+      "ops.sla.breached"
+    ],
+    "subscribes": [
+      "client.created",
+      "project.started",
+      "invoice.created",
+      "support.issue.created"
+    ]
+  },
+  "permissions": [
+    "ops.task.read",
+    "ops.task.write",
+    "ops.process.read",
+    "ops.process.write",
+    "ops.checklist.read",
+    "ops.checklist.write",
+    "ops.sop.read",
+    "ops.sop.write",
+    "ops.issue.read",
+    "ops.issue.write",
+    "ops.incident.read",
+    "ops.incident.write",
+    "ops.sla.read",
+    "ops.sla.write",
+    "ops.resource.read",
+    "ops.resource.write",
+    "ops.report.read",
+    "ops.report.write",
+    "ops.calendar.read",
+    "ops.calendar.write",
+    "ops.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "clientos",
+    "financeos",
+    "supportos"
+  ],
+  "runtime": {
+    "port": 8100,
+    "localBaseUrl": "http://localhost:8100"
+  }
+}

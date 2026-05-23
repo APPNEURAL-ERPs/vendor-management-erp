@@ -1,0 +1,78 @@
+{
+  "id": "knowledgeos",
+  "name": "KnowledgeOS",
+  "package": "@appneurox/knowledgeos",
+  "version": "1.0.0",
+  "description": "Knowledge base, documentation, SOP, wiki, search, organizational memory, RAG, FAQ, and knowledge reuse layer",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "KnowledgeOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/knowledge",
+    "standalonePath": "/knowledgeos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "knowledge.space.create",
+    "knowledge.article.create",
+    "knowledge.sop.create",
+    "knowledge.search",
+    "knowledge.ask"
+  ],
+  "workflows": [
+    "knowledge.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "knowledge.article.created",
+      "knowledge.article.updated",
+      "knowledge.space.created"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "knowledge.article.read",
+    "knowledge.article.write",
+    "knowledge.space.read",
+    "knowledge.space.write",
+    "knowledge.sop.read",
+    "knowledge.sop.write",
+    "knowledge.search.execute",
+    "knowledge.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/aios",
+      "@appneurox/searchos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "aios",
+    "supportos",
+    "clientos",
+    "learningos"
+  ],
+  "runtime": {
+    "port": 7200,
+    "localBaseUrl": "http://localhost:7200"
+  }
+}

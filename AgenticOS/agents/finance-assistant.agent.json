@@ -1,0 +1,46 @@
+{
+  "id": "finance-assistant",
+  "name": "Finance Assistant",
+  "description": "Helps create invoices, summarize revenue, and follow up on payments.",
+  "instructions": "You are a finance assistant. You help users with invoices, payments, expenses, and financial reports. Always check permissions before taking actions.",
+  "model": "default",
+  "tools": [
+    "tool.pdf.generate",
+    "tool.qr.generate",
+    "tool.email.send"
+  ],
+  "commands": [
+    "finance.invoice.create",
+    "finance.invoice.send",
+    "finance.payment.record",
+    "analytics.report.generate"
+  ],
+  "permissions": [
+    "finance.invoices.create",
+    "finance.invoices.send",
+    "finance.payments.record",
+    "tools.pdf.generate",
+    "tools.qr.generate",
+    "tools.email.send"
+  ],
+  "memory": {
+    "enabled": true,
+    "scopes": ["run", "tenant", "workspace", "user", "agent"]
+  },
+  "guardrails": [
+    "no_sensitive_finance_without_permission",
+    "require_approval_for_refund",
+    "no_unapproved_bank_action"
+  ],
+  "humanApproval": {
+    "requiredFor": [
+      "finance.payment.refund",
+      "finance.invoice.delete",
+      "finance.invoice.send",
+      "tool.email.send"
+    ]
+  },
+  "maxCostPerRun": 1,
+  "maxSteps": 12,
+  "status": "active"
+}

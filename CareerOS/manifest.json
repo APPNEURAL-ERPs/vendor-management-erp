@@ -1,0 +1,82 @@
+{
+  "id": "careeros",
+  "name": "CareerOS",
+  "package": "@appneurox/careeros",
+  "version": "1.0.0",
+  "description": "CareerOS: Jobs, hiring pipeline, applications, interviews, offers, onboarding, and career paths",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "CareerOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/career",
+    "standalonePath": "/career",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "career.job.create",
+    "career.application.submit",
+    "career.interview.schedule",
+    "career.offer.issue"
+  ],
+  "workflows": [
+    "career.hiring.workflow",
+    "career.onboarding.workflow"
+  ],
+  "agents": [
+    "career.advisor",
+    "career.interview.coach"
+  ],
+  "events": {
+    "publishes": [
+      "career.job.created",
+      "career.application.submitted",
+      "career.interview.scheduled",
+      "career.offer.issued"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "career.job.read",
+    "career.job.write",
+    "career.application.read",
+    "career.application.write",
+    "career.interview.read",
+    "career.interview.write",
+    "career.offer.read",
+    "career.offer.write",
+    "career.careerpath.read",
+    "career.skillprofile.read",
+    "career.analytics.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/aios",
+      "@appneurox/analyticsos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "aios",
+    "analyticsos"
+  ],
+  "runtime": {
+    "port": 10200,
+    "localBaseUrl": "http://localhost:10200"
+  }
+}

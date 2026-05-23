@@ -1,0 +1,95 @@
+{
+  "id": "contractos",
+  "name": "ContractOS",
+  "package": "@appneurox/contractos",
+  "version": "1.0.0",
+  "description": "Contract lifecycle management: agreements, clauses, signatures, negotiations, obligations, amendments, and compliance tracking",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ContractOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/contracts",
+    "standalonePath": "/contractos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "contract.create",
+    "contract.approve",
+    "contract.sign",
+    "contract.renew",
+    "obligation.track"
+  ],
+  "workflows": [
+    "contract.default.workflow",
+    "contract.signature.workflow",
+    "contract.renewal.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "contract.created",
+      "contract.updated",
+      "contract.approved",
+      "contract.signed",
+      "contract.expiring",
+      "contract.renewed",
+      "contract.terminated",
+      "obligation.due",
+      "obligation.completed"
+    ],
+    "subscribes": [
+      "sales.deal.won",
+      "billing.invoice.created"
+    ]
+  },
+  "permissions": [
+    "contract.read",
+    "contract.write",
+    "contract.approve",
+    "contract.sign",
+    "contract.delete",
+    "obligation.read",
+    "obligation.write",
+    "clause.read",
+    "clause.write",
+    "template.read",
+    "template.write",
+    "party.read",
+    "party.write",
+    "audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/securityos",
+      "@appneurox/documentos",
+      "@appneurox/billingos"
+    ]
+  },
+  "dataClassification": "confidential",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "documentos",
+    "billingos",
+    "salesos",
+    "projectos"
+  ],
+  "runtime": {
+    "port": 9500,
+    "localBaseUrl": "http://localhost:9500"
+  }
+}

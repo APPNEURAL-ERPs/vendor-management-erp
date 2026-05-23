@@ -1,0 +1,42 @@
+{
+  "name": "@appneurox/contractos",
+  "version": "1.0.0",
+  "description": "ContractOS: contract lifecycle management for agreements, clauses, signatures, negotiations, obligations, amendments, and compliance",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/seed-state.js",
+    "reset": "rm -f data/contractos.db.json && npm run seed",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appneurox",
+    "contractos",
+    "contract",
+    "agreement",
+    "clause",
+    "signature",
+    "obligation",
+    "compliance",
+    "operating-system"
+  ],
+  "appneurox": {
+    "os": "contractos",
+    "domain": "contracts",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

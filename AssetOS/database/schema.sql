@@ -1,0 +1,15 @@
+-- AssetOS starter schema
+create table if not exists asset_items (
+  id text primary key,
+  tenant_id text not null,
+  key text not null,
+  name text not null,
+  type text not null,
+  status text not null,
+  attributes json,
+  metadata json,
+  created_at text not null,
+  updated_at text not null
+);
+
+create unique index if not exists idx_asset_items_tenant_key on asset_items(tenant_id, key);

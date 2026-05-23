@@ -1,0 +1,82 @@
+{
+  "id": "billingos",
+  "name": "BillingOS",
+  "package": "@appneurox/billingos",
+  "version": "1.0.0",
+  "description": "BillingOS: subscription, plan, invoice, payment, usage metering, credits, renewals, refunds, dunning, tax, and billing automation",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "BillingOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/billing",
+    "standalonePath": "/billingos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "billing.account.create",
+    "billing.subscription.create",
+    "billing.invoice.generate",
+    "billing.payment.collect",
+    "billing.usage.track"
+  ],
+  "workflows": [
+    "billing.default.workflow"
+  ],
+  "agents": [
+    "billing.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "billing.subscription.created",
+      "billing.invoice.generated",
+      "billing.payment.received",
+      "billing.usage.recorded"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "billing.account.read",
+    "billing.account.write",
+    "billing.subscription.read",
+    "billing.subscription.write",
+    "billing.invoice.read",
+    "billing.invoice.write",
+    "billing.payment.read",
+    "billing.payment.write",
+    "billing.usage.read",
+    "billing.usage.write",
+    "billing.analytics.read",
+    "billing.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/financeos"
+    ]
+  },
+  "dataClassification": "confidential",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "financeos",
+    "toolos",
+    "aios"
+  ],
+  "runtime": {}
+}

@@ -1,0 +1,88 @@
+{
+  "id": "salesos",
+  "name": "SalesOS",
+  "package": "@appneurox/salesos",
+  "version": "1.0.0",
+  "description": "Lead, prospect, pipeline, deal, proposal, follow-up, sales automation, and revenue conversion management",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "SalesOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/sales",
+    "standalonePath": "/salesos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "sales.lead.create",
+    "sales.lead.qualify",
+    "sales.deal.create",
+    "sales.proposal.generate",
+    "sales.forecast.view"
+  ],
+  "workflows": [
+    "sales.lead.qualification.workflow",
+    "sales.deal.closure.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "sales.lead.created",
+      "sales.lead.qualified",
+      "sales.deal.stage.changed",
+      "sales.deal.won",
+      "sales.deal.lost",
+      "sales.proposal.sent"
+    ],
+    "subscribes": [
+      "website.form.submitted",
+      "marketing.campaign.converted",
+      "partner.lead.received"
+    ]
+  },
+  "permissions": [
+    "sales.lead.read",
+    "sales.lead.write",
+    "sales.deal.read",
+    "sales.deal.write",
+    "sales.proposal.read",
+    "sales.proposal.write",
+    "sales.pipeline.manage",
+    "sales.forecast.read",
+    "sales.analytics.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/clientos",
+      "@appneurox/financeos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "clientos",
+    "financeos",
+    "websiteos",
+    "growthos"
+  ],
+  "runtime": {
+    "port": 8500,
+    "localBaseUrl": "http://localhost:8500"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "researchos",
+  "name": "ResearchOS",
+  "package": "@appneurox/researchos",
+  "version": "1.0.0",
+  "description": "ResearchOS: research questions, studies, sources, notes, hypotheses, evidence, insights, and synthesis for market, competitor, and user research",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "ResearchOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/research",
+    "standalonePath": "/researchos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "research.study.create",
+    "research.question.create",
+    "research.source.add",
+    "research.note.create",
+    "research.hypothesis.generate",
+    "research.evidence.collect",
+    "research.insight.derive"
+  ],
+  "workflows": [
+    "research.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "research.study.created",
+      "research.study.updated",
+      "research.insight.generated",
+      "research.evidence.collected"
+    ],
+    "subscribes": [
+      "productos.opportunity.discovered",
+      "growthos.market.analysed"
+    ]
+  },
+  "permissions": [
+    "research.study.read",
+    "research.study.write",
+    "research.question.read",
+    "research.question.write",
+    "research.source.read",
+    "research.source.write",
+    "research.note.read",
+    "research.note.write",
+    "research.hypothesis.read",
+    "research.hypothesis.write",
+    "research.evidence.read",
+    "research.evidence.write",
+    "research.insight.read",
+    "research.insight.write"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/productos",
+      "@appneurox/growthos",
+      "@appneurox/contentos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "productos",
+    "growthos",
+    "contentos"
+  ],
+  "runtime": {
+    "port": 7300,
+    "localBaseUrl": "http://localhost:7300"
+  }
+}

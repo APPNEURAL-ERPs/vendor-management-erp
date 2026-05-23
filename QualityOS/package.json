@@ -1,0 +1,40 @@
+{
+  "name": "@appneurox/qualityos",
+  "version": "1.0.0",
+  "description": "QualityOS: QA processes, test cases, bug tracking, feedback, satisfaction, and quality metrics",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "npm run build && node dist/main.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "reset": "rm -f data/qualityos.db.json && npm run seed",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5"
+  },
+  "keywords": [
+    "appneurox",
+    "qualityos",
+    "operating-system",
+    "qa",
+    "testing",
+    "bug-tracking"
+  ],
+  "appneurox": {
+    "os": "qualityos",
+    "domain": "quality",
+    "modes": [
+      "standalone",
+      "platform"
+    ],
+    "manifest": "./manifest.json"
+  }
+}

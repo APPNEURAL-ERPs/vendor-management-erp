@@ -1,0 +1,82 @@
+{
+  "id": "dataos",
+  "name": "DataOS",
+  "package": "@appneurox/dataos",
+  "version": "1.0.0",
+  "description": "Data models, schemas, datasets, catalogs, lineage, quality, access, and data products",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "DataOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/data",
+    "standalonePath": "/dataos",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "data.model.create",
+    "data.schema.generate",
+    "data.import.run",
+    "data.export.run",
+    "data.quality.check",
+    "data.pipeline.run"
+  ],
+  "workflows": [
+    "data.default.workflow"
+  ],
+  "events": {
+    "publishes": [
+      "data.model.created",
+      "data.schema.generated",
+      "data.import.completed",
+      "data.quality.checked",
+      "data.pipeline.completed"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "data.model.read",
+    "data.model.write",
+    "data.schema.read",
+    "data.schema.write",
+    "data.import.run",
+    "data.export.run",
+    "data.quality.check",
+    "data.pipeline.run",
+    "data.catalog.read",
+    "data.lineage.read",
+    "data.access.manage"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/analyticsos",
+      "@appneurox/aios"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "analyticsos",
+    "aios"
+  ],
+  "runtime": {
+    "port": 6500,
+    "localBaseUrl": "http://localhost:6500"
+  }
+}

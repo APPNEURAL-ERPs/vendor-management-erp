@@ -1,0 +1,84 @@
+{
+  "id": "vendoros",
+  "name": "VendorOS",
+  "package": "@appneurox/vendoros",
+  "version": "1.0.0",
+  "description": "Vendor management, relationships, performance tracking, contracts, and vendor lifecycle",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "VendorOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/vendor",
+    "standalonePath": "/vendoros",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "vendor.create",
+    "vendor.onboard",
+    "vendor.approve",
+    "vendor.suspend"
+  ],
+  "workflows": [
+    "vendor.default.workflow"
+  ],
+  "agents": [
+    "vendor.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "vendor.created",
+      "vendor.updated",
+      "vendor.approved",
+      "vendor.rejected",
+      "vendor.onboarded",
+      "vendor.suspended"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "vendor.read",
+    "vendor.write",
+    "vendor.contract.read",
+    "vendor.contract.write",
+    "vendor.payment.read",
+    "vendor.payment.write",
+    "vendor.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": [
+      "@appneurox/procurementos",
+      "@appneurox/financeos",
+      "@appneurox/contractos"
+    ]
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos",
+    "procurementos",
+    "financeos",
+    "contractos",
+    "complianceos"
+  ],
+  "runtime": {
+    "port": 11900,
+    "localBaseUrl": "http://localhost:11900"
+  }
+}

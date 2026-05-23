@@ -1,0 +1,70 @@
+{
+  "id": "aios",
+  "name": "AIOS",
+  "package": "@appneurox/aios",
+  "version": "1.0.0",
+  "description": "Agents, prompts, tools, model routing, memory, and AI evaluation",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "AIOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/ai",
+    "standalonePath": "/aios",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "ai.item.create",
+    "ai.workflow.start",
+    "ai.policy.apply"
+  ],
+  "workflows": [
+    "ai.default.workflow"
+  ],
+  "agents": [
+    "ai.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "ai.item.created",
+      "ai.item.updated",
+      "ai.workflow.started"
+    ],
+    "subscribes": []
+  },
+  "permissions": [
+    "ai.item.read",
+    "ai.item.write",
+    "ai.workflow.run",
+    "ai.policy.manage",
+    "ai.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos",
+      "@appneurox/securityos"
+    ],
+    "optional": []
+  },
+  "dataClassification": "internal",
+  "aiAgentSafetyLevel": "approval-required-for-write-actions",
+  "relatedSystems": [
+    "platformos",
+    "securityos"
+  ],
+  "runtime": {
+    "port": 5700,
+    "localBaseUrl": "http://localhost:5700"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "inventoryos",
+  "name": "InventoryOS",
+  "package": "@appneurox/inventoryos",
+  "version": "1.0.0",
+  "description": "Inventory management, stock levels, warehouses, transfers, and inventory lifecycle",
+  "modes": [
+    "standalone",
+    "platform"
+  ],
+  "status": "active",
+  "ownership": {
+    "owner": "APPNEURAL",
+    "domainOwner": "InventoryOS Team",
+    "visibility": "private",
+    "reviewDate": "TBD"
+  },
+  "api": {
+    "basePath": "/v1/inventory",
+    "standalonePath": "/inventory",
+    "docsPath": "/docs"
+  },
+  "entrypoints": {
+    "api": "./dist/main.js",
+    "manifest": "./manifest.json"
+  },
+  "commands": [
+    "inventory.item.create",
+    "inventory.stock.in",
+    "inventory.stock.out",
+    "inventory.stock.transfer",
+    "inventory.stock.adjust"
+  ],
+  "workflows": [
+    "inventory.default.workflow"
+  ],
+  "agents": [
+    "inventory.assistant"
+  ],
+  "events": {
+    "publishes": [
+      "inventory.item.created",
+      "inventory.item.updated",
+      "inventory.stock.received",
+      "inventory.stock.issued",
+      "inventory.stock.transferred",
+      "inventory.stock.low",
+      "inventory.stock.out_of_stock"
+    ],
+    "subscribes": [
+      "procurement.stock.received"
+    ]
+  },
+  "permissions": [
+    "inventory.item.read",
+    "inventory.item.write",
+    "inventory.stock.read",
+    "inventory.stock.write",
+    "inventory.warehouse.read",
+    "inventory.warehouse.write",
+    "inventory.transfer.read",
+    "inventory.transfer.write",
+    "inventory.adjustment.read",
+    "inventory.adjustment.write",
+    "inventory.audit.read"
+  ],
+  "dependencies": {
+    "required": [
+      "@appneurox/platformos"
+    ],
+    "optional": [
+      "@appneurox/procurementos",
+      "@appneurox/financeos",
+      "@appneurox/resourceos"
+    ]
+  },
+  "dataClassification": "internal",
+  "relatedSystems": [
+    "platformos",
+    "procurementos",
+    "financeos",
+    "resourceos",
+    "commerceos"
+  ],
+  "runtime": {
+    "port": 11200,
+    "localBaseUrl": "http://localhost:11200"
+  }
+}

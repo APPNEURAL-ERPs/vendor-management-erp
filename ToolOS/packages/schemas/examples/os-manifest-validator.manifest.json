@@ -1,0 +1,86 @@
+{
+  "id": "tool.os_manifest.validator",
+  "name": "OS Manifest Validator",
+  "packageName": "@appneurox/os-manifest-validator-tool",
+  "version": "1.0.0",
+  "description": "Validates APPNEUROX OS and tool manifests for structure, policy, and dependency consistency.",
+  "category": "developer",
+  "type": "validator",
+  "ai": {
+    "enabled": true,
+    "required": true,
+    "level": 2,
+    "provider": "AIOS"
+  },
+  "modes": ["standalone", "platform", "agent-tool"],
+  "commands": [
+    {
+      "name": "tool.os_manifest.validator.run",
+      "description": "Validate an OS or tool manifest.",
+      "input": "manifest",
+      "output": "validation"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "tools.os_manifest.validator.run",
+      "description": "Run manifest validation.",
+      "required": true
+    }
+  ],
+  "events": {
+    "publishes": ["tool.os_manifest.validator.completed"],
+    "subscribes": ["tool.manifest.changed"]
+  },
+  "api": {
+    "basePath": "/v1/tools/tool.os_manifest.validator"
+  },
+  "sdk": {
+    "namespace": "tools.osManifest.validator"
+  },
+  "cli": {
+    "namespace": "os-manifest validator"
+  },
+  "inputs": [
+    {
+      "name": "manifest",
+      "type": "object",
+      "required": true
+    },
+    {
+      "name": "strict",
+      "type": "boolean",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "valid",
+      "type": "boolean"
+    },
+    {
+      "name": "issues",
+      "type": "array"
+    },
+    {
+      "name": "suggestions",
+      "type": "array"
+    }
+  ],
+  "dependencies": {
+    "required": ["@appneurox/toolos"],
+    "optional": ["@appneurox/aios", "@appneurox/developeros"],
+    "external": []
+  },
+  "usedBy": ["DeveloperOS", "ToolOS", "AIOS", "CommandOS"],
+  "safety": {
+    "requiresApproval": false,
+    "sensitiveData": false,
+    "allowedForAgents": true,
+    "rateLimit": {
+      "enabled": true,
+      "maxRequests": 100,
+      "windowSeconds": 60
+    }
+  }
+}
