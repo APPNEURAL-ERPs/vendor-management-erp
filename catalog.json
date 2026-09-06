@@ -1313,7 +1313,7 @@
     "name": "UTMOS",
     "package": "@appneurox/utmos",
     "version": "1.0.0",
-    "description": "UTM parameter management, campaign tracking, attribution, and marketing analytics for Appneural platforms",
+    "description": "UTM parameter management, campaign tracking, attribution, and marketing analytics for APPNEURAL platforms",
     "api": {
       "basePath": "/v1/utm",
       "standalonePath": "/utmos",
